@@ -1,0 +1,103 @@
+<!html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Deals Dashbod | Notes</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="dealsdashbod.css">
+</head>
+<body>
+<div class="container">
+	<h1>Deals Dashbod | <small>Notes</small></h1>
+
+	<div class="well">
+		<h2>Objective</h2>
+		<p>A small web development and improvement interview assignment for <a href="https://www.dealsdashbod.com/">Deals Dashbod</a> to demonstrate my skills and capabilities.</p>
+		<p><b>Assignment Here:</b> <a href="../dealsdashbod">Deals Dashbod</a></p>
+	</div>
+
+	<div class="well">
+		<h2>Requirements</h2>
+		<ul>
+			<li>A nonfunctional log in / sign up area</li>
+			<li>An area displaying deals</li>
+			<li>An area to attract users to use Deals Dashbod</li>
+			<li>Create a MySQL database to store deal information</li>
+			<li>Responsive Design</li>
+		</ul>
+	</div>
+
+	<div class="well">
+		<h2>Process</h2>
+		<h3>Understanding</h3>
+		<p>To better understand Deals Dashbod, I wanted to better Deals Dashbod and their users.</p>
+		
+		<h4>Deals Dashbod</h4>
+		<p>Deals Dashbod is a daily deal tracker. It finds deals to help users save money and time. And deals are personalized for users for relevant use.</p>
+		
+		<h4>Users</h4>
+		<p>Deals Dashbod is aimed at users who want to save money and time. Therefore, deals must provide great % savings. As for time, it seems like users are too busy to be keeping track of their deals. So deals must be time-sensitively tracked.</p>
+
+		<h3>Design: A Dashbod Deal</h3>
+		<p>
+			An important thing to define is "what is a deal". Looking at the website, a deal must contain:
+			<ul>
+				<li>Source (Groupon, Livingsocial, etc</li>
+				<li>Link to it's source</li>
+				<li>Title</li>
+				<li>Location</li>
+				<li>Original price</li>
+				<li>Deal saving price</li>
+				<li>% off savings</li>
+				<li>Image</li>
+			</ul>
+			Next is, "what can a deal do?":
+			<ul>
+				<li>A deal must be sharable on social media</li>
+				<li>A deal must be sortable and searchable</li>
+			</ul>
+		</p>
+
+		<h3>Technical</h3>
+		<p>For quick developement, I have decided to utilize several frameworks and libraries such as Bootstrap for responsiveness, JQuery for easier user of JS, and Angular JS to handle data procesing and functionality.</p>
+		<p>For storing the deal information, a MySQL database to be queries and return JSON data to be processed.</p>
+	</div>
+
+	<div class="well">
+		<h2>Improvements / Suggestions</h2>
+
+		<h4>Responsiveness</h4>
+		<p>With my work, I tried to make the website more responsive. Responsiveness allows users to view Deals Dashbod on many screens, whether it be on the desktop or tablet or mobile. Also the current website utilizes the HTML TABLE tag for layout, which is not proper use.</p>
+		
+		<h4>Image Carousel</h4>
+		<p>
+			This is should be removed and replaced with something else that attracts users. Carousels kills the user experience. For further reasoning, see the links below:
+			<ul>
+				<li><a href="http://shouldiuseacarousel.com/">Should I use a Carousel</a></li>
+				<li><a href="http://searchengineland.com/homepage-sliders-are-bad-for-seo-usability-163496">Homepage Sliders: Bad For SEO, Bad For Usability</a></li>
+				<li><a href="http://conversionxl.com/dont-use-automatic-image-sliders-or-carousels-ignore-the-fad/">Don't Use Automatic Image Sliders or Carousels, Ignore the Fad</a></li>
+			</ul>
+			A possible replacement is static banner images. If the user is logged in, it should show the most suggestable personalized deal. If the user is not logged in, it should show the 'best deal of the day'.
+		</p>
+
+		<h4>Slow Loading Time</h4>
+		<p>I noticed slow loading time is attributed to a security issue retrieving images. If you use Google Chrome developer tools, you can see the console messages about this.</p>
+
+		<h4>Location Based Deals</h4>
+		<p>On a future iteration of Deals Dashbod, especially on a mobile use, Deals Dashbod should display deals based on a user's location for impromptu use. I think this will promote further use of Deals Dashbod, and encourage users to use deals on the go. This will allow users to use deals without future planning.</p>
+
+		<h4>Comparable Deals</h4>
+		<p>Currently the only way to 'compare' deals is through the sorting and filering system. However, if a user wants to compare selective deals, they will still be opening multiple windows to compare.</p>
+	</div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</body>
+</html>
