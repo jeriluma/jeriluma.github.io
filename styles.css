@@ -1,0 +1,23 @@
+.project {
+
+}
+
+.project a{
+	color: #000;
+
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	/* ...and now for the proper property */
+	transition:.5s;
+}
+
+.project a:hover {
+	text-decoration: none;
+	color: #555;
+}
+
+.project .projectLink {
+	font-weight: bold;
+}
