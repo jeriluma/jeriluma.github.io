@@ -236,6 +236,10 @@ button {
 	.log-content .social-media {
 		padding-left: 0;
 	}
+
+	.log-content .social-media {
+		padding-top: 0px;
+	}
  }
 
 .header {
@@ -270,7 +274,7 @@ button {
 	font-weight: 400;
 }
 
-.header .logo {
+.logo {
 	-o-transition:.2s;
 	-ms-transition:.2s;
 	-moz-transition:.2s;
@@ -284,12 +288,12 @@ button {
 	margin: 0 auto;
 }
 
-.header .logo:hover {
+.logo:hover {
 	border-color: #ff9900;
 	background-color: #97ba41;
 }
 
-.header .logo div {
+.logo div {
 	width: 30px;
 	height: 30px;
 	background-color: #72A2D3;
@@ -476,10 +480,16 @@ button {
 	transition:.5s;
 
 	border: 2px solid #FFF;
+
 }
 
 .deal .border:hover {
 	border-color: #4283C5;
+}
+
+.deal .dealAddedBorder,
+.deal .dealAddedBorder:hover {
+	border-color: #97ba41;
 }
 
 .deal .details {
@@ -506,12 +516,19 @@ button {
 	background-color: #FFF;
 	border: 1px solid #505050;
 	padding: 5px 15px;
+	width: 104px;
 }
 
 .deal button:hover {
 	background-color: #4283C5;
 	color: #FFF;
 	border-color: #4283C5;
+}
+
+.deal .dealAdded {
+	background-color: #97ba41;
+	color: #FFF;
+	border-color: #97ba41;
 }
 
 .deal a {
@@ -558,6 +575,14 @@ button {
 	height: 200px;
 }
 
+.deal {
+	overflow: hidden;
+}
+
+.deal .imgContainter:hover .actions{
+	display: block;
+}
+
 .deal img {
 	display: block;
   	min-width: 100%;
@@ -572,6 +597,11 @@ button {
 		width: auto;
 	}
 
+	.deal .fb img{
+		width: 30px;
+		height: auto;
+	}
+
 	.banner img {
 		width: 100%;
 		height: auto;
@@ -580,4 +610,72 @@ button {
 	.bannerBig .imgContainer {
 		height: 300px;
 	}
+}
+
+.deal:hover .actions {
+	display: block;
+}
+
+.deal .actions {
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+
+	position: absolute;
+	display: none;
+}
+
+.deal .actions div {
+	float: right;
+	padding: 5px;
+
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+}
+
+.deal .actions div:hover {
+	opacity: 0.7;
+}
+
+.deal .twitter {
+	background-color: #55ACEE;
+	height: 30px;
+	width: auto;
+	margin: 5px;
+}
+
+.deal .twitter img{
+	height: 20px;
+	width: auto;
+}
+
+.deal .fb img{
+	width: 30px;
+}
+
+.deal .email span {
+	font-size: 19px;
+	color: #FFF;
+	background-color: #55ACEE;
+	padding: 5px;
+}
+
+.footer {
+	text-align: center;
+}
+
+.footer a{
+	color: #FFF; 
+	line-height: 50px;
+	vertical-align: middle;
+}
+
+.footer a:hover {
+	text-decoration: none;
+	color: #ff9900;
 }
