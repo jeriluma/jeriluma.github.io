@@ -7,6 +7,8 @@
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
+	<link href="http://fonts.googleapis.com/css?family=Roboto:500, 400, 300, 300italic" rel="stylesheet" type="text/css">
+
 	<!-- Custom CSS -->
 	<link rel="stylesheet" type="text/css" href="dealsdashbod.css">
 
@@ -20,42 +22,132 @@
 <!-- Header / Navbar -->
 <div class="header">
 	<div class="container">
-		<h1>Deals Dashbod </h1>
-		<h2 class="subtitle">Your Daily Deal Tracker</h2>
+		<div class="row">
+			<a href="#">
+				<div class="logo"></div>
+				<h1><span>Deals Dashbod</span></h1>
+				<div>Your Daily Deal Tracker</div>
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class="city">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<h2>Seattle, WA</h2>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+				<input type="search" placeholder="search">
+			</div>
+		</div>
 	</div>
 </div>
 
 <div class="container">
+	<div class="row sortFilter">
+		<div class="col-xs-6 col-sm-push-8 col-sm-2 sort">
+			<button ng-click="sort = !sort; filter = false">Sort By</button>
+
+			<div ng-show="sort">
+				<ul>
+					<li>Popularity</li>
+					<li>Newest</li>
+					<li>Expiring Soon</li>
+					<li>Price: Low to High</li>
+					<li>Price: High to Low</li>
+					<li>Discount: Low to High</li>
+					<li>Discount: High to Low</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-xs-6 col-sm-push-8 col-sm-2 filter">
+			<button ng-click="filter = !filter; sort = false">Filter By</button>
+		</div>
+	</div>
+	<div class="row" ng-show="filter">
+		<div class="col-xs-12">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+	</div>
+</div>
+
+<div class="container deal-content">
+
 	<!-- Banner Area -->
-	<div class="row">
-		<div class="col-xs-12 col-sm-12 col-md-6 deal bigBannerDeal">
-			<a ng-href="{{deal1.source}}"><div>
-				<div class="imgContainer"><img ng-src="{{deal1.image}}"></div>
-				<h2>{{deal1.savingPercent}}% off at {{deal1.venue}} in {{deal1.location}}</h2>
-			</div></a>
-			<div>
-				<span>${{deal1.originalPrice}} </span>
-				<span>${{deal1.dealPrice}}</span>
+	<div class="row banner">
+		<div ng-repeat="deal in deals" ng-if="$index == 0 " class="col-xs-12 deal">
+			<div class="border">
+				<a ng-href="{{deal.source}}">
+					<div class="imgContainer">
+						<img ng-src="{{deal.image}}">
+					</div>
+				</a>
+				<div class="details">
+					<a ng-href="{{deal.source}}">
+						<div class="venue">
+							{{deal.venue}}
+						</div>
+						<div class="location">
+							{{deal.location}}
+						</div>
+					</a>
+					<div class="row">
+						<div class="originalPrice col-xs-4">
+							${{deal.originalPrice}}
+						</div>
+						<div class="dealPrice col-xs-4">
+							${{deal.dealPrice}}
+						</div>
+						<div class="savingPercent col-xs-4">
+							{{deal.savingPercent}}% Off
+						</div>
+					</div>
+					<div>
+						<button type="button">Add Deal</button>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="col-xs-12 col-sm-6 col-md-3 deal smallBannerDeal">
-			<a ng-href="{{deal2.source}}"><div>
-				<div class="imgContainer"><img ng-src="{{deal2.image}}"></div>
-				<h2>{{deal2.savingPercent}}% off at {{deal2.venue}} in {{deal2.location}}</h2>
-			</div></a>
-			<div>
-				<span>${{deal2.originalPrice}} </span>
-				<span>${{deal2.dealPrice}}</span>
-			</div>
-		</div>
-		<div class="col-xs-12 col-sm-6 col-md-3 deal smallBannerDeal">
-			<a ng-href="{{deal3.source}}"><div>
-				<div class="imgContainer"><img ng-src="{{deal3.image}}"></div>
-				<h2>{{deal3.savingPercent}}% off at {{deal3.venue}} in {{deal3.location}}</h2>
-			</div></a>
-			<div>
-				<span>${{deal3.originalPrice}} </span>
-				<span>${{deal3.dealPrice}}</span>
+	</div>
+	<div class="row banner">
+		<div ng-repeat="deal in deals" ng-if="$index > 0 && $index < 3" class="col-xs-12 col-sm-6 deal">
+			<div class="border">
+				<a ng-href="{{deal.source}}">
+					<div class="imgContainer">
+						<img ng-src="{{deal.image}}">
+					</div>
+				</a>
+				<div class="details">
+					<a ng-href="{{deal.source}}">
+						<div class="venue">
+							{{deal.venue}}
+						</div>
+						<div class="location">
+							{{deal.location}}
+						</div>
+					</a>
+					<div class="row">
+						<div class="originalPrice col-xs-4">
+							${{deal.originalPrice}}
+						</div>
+						<div class="dealPrice col-xs-4">
+							${{deal.dealPrice}}
+						</div>
+						<div class="savingPercent col-xs-4">
+							{{deal.savingPercent}}% Off
+						</div>
+					</div>
+					<div>
+						<button type="button">Add Deal</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -63,13 +155,36 @@
 	<!-- Deals -->
 	<div class="row">
 		<div ng-repeat="deal in deals" class="col-xs-12 col-sm-6 col-md-4 deal">
-			<a ng-href="{{deal.source}}"><div>
-				<div class="imgContainer"><img ng-src="{{deal.image}}"></div>
-				<h2>{{deal.savingPercent}}% off at {{deal.venue}} in {{deal.location}}</h2>
-			</div></a>
-			<div>
-				<span>${{deal.originalPrice}} </span>
-				<span>${{deal.dealPrice}}</span>
+			<div class="border">
+				<a ng-href="{{deal.source}}">
+					<div class="imgContainer">
+						<img ng-src="{{deal.image}}">
+					</div>
+				</a>
+				<div class="details">
+					<a ng-href="{{deal.source}}">
+						<div class="venue">
+							{{deal.venue}}
+						</div>
+						<div class="location">
+							{{deal.location}}
+						</div>
+					</a>
+					<div class="row">
+						<div class="originalPrice col-xs-4">
+							${{deal.originalPrice}}
+						</div>
+						<div class="dealPrice col-xs-4">
+							${{deal.dealPrice}}
+						</div>
+						<div class="savingPercent col-xs-4">
+							{{deal.savingPercent}}% Off
+						</div>
+					</div>
+					<div>
+						<button type="button">Add Deal</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
