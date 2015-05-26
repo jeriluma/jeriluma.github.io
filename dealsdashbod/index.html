@@ -4,6 +4,8 @@
 <head>
 	<title>Deals Dashbod</title>
 
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
@@ -19,14 +21,39 @@
 	<script type="text/javascript" src="dealsdashbod.js"></script>
 </head>
 <body ng-controller="dealsController">
-<!-- Header / Navbar -->
+<!-- Log In -->
+<div class="log">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<form class="form-inline">
+					<a href="login.html">
+						<button type="button" >Log In</button>
+						<button type="button" class="signUp" >Sign Up</button>
+					</a>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Header  -->
 <div class="header">
 	<div class="container">
 		<div class="row">
+			
+		</div>
+		<div class="row">
 			<a href="#">
-				<div class="logo"></div>
-				<h1><span>Deals Dashbod</span></h1>
-				<div>Your Daily Deal Tracker</div>
+				<div class="col-xs-4 col-sm-12">
+					<div class="logo"><div></div></div>
+				</div>
+				<div class="col-xs-8 col-sm-12">
+					<h1><span>Deals Dashbod</span></h1>
+				</div>
+				<div class="subtitle col-sm-12">
+					<div>Your Daily Deal Tracker</div>
+				</div>
 			</a>
 		</div>
 	</div>
@@ -38,8 +65,12 @@
 			<div class="col-xs-12 col-sm-6">
 				<h2>Seattle, WA</h2>
 			</div>
-			<div class="col-xs-12 col-sm-6">
-				<input type="search" placeholder="search">
+			<div class="col-xs-12 col-sm-6 search">
+				<div class="input-group">
+					<label class="sr-only">Search</label>
+					<input type="search" class="form-control" placeholder="search">
+					<span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -78,7 +109,7 @@
 	</div>
 </div>
 
-<div class="container deal-content">
+<div class="container content">
 
 	<!-- Banner Area -->
 	<div class="row banner">
@@ -192,7 +223,16 @@
 
 <div class="footer">
 	<div class="container">
-		
+		<div class="row">
+			<div class="col-xs-12">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</div>
+		</div>
 	</div>
 </div>
 

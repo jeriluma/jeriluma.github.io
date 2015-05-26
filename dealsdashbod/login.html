@@ -1,0 +1,119 @@
+<!html>
+<!DOCTYPE html>
+<html ng-app="dealsApp">
+<head>
+	<title>Deals Dashbod</title>
+
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+	<link href="http://fonts.googleapis.com/css?family=Roboto:500, 400, 300, 300italic" rel="stylesheet" type="text/css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="dealsdashbod.css">
+
+	<!-- AngularJS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+
+	<!-- Custom JS -->
+	<script type="text/javascript" src="dealsdashbod.js"></script>
+</head>
+<body ng-controller="dealsController">
+<!-- Log In -->
+<div class="log">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<form class="form-inline">
+					<a href="#">
+						<button type="button">Log In</button>
+						<button type="button" class="signUp">Sign Up</button>
+					</a>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Header  -->
+<div class="header">
+	<div class="container">
+		<div class="row">
+			
+		</div>
+		<div class="row">
+			<a href="../dealsdashbod">
+				<div class="col-xs-4 col-sm-12">
+					<div class="logo"><div></div></div>
+				</div>
+				<div class="col-xs-8 col-sm-12">
+					<h1><span>Deals Dashbod</span></h1>
+				</div>
+				<div class="subtitle col-sm-12">
+					<div>Your Daily Deal Tracker</div>
+				</div>
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class="log log-content">
+	<div class="container">
+		<h2>Log In / Sign Up </h2>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+				<form class="form-inline">
+					<div class="form-group">
+						<label class="sr-only">Username</label>
+						<input type="text" class="form-control" placeholder="Username">
+					</div>
+					<div class="form-group">
+						<label class="sr-only">Password</label>
+						<input type="text" class="form-control" placeholder="Password">
+					</div>
+	
+						<div class="checkbox">
+							<label>
+								<input type="checkbox"> <span>Remember me</span>
+							</label>
+						</div>
+					<div>
+						<button type="button" class="login">Log In</button>
+						<button type="button" class="signUp">Sign Up</button>
+					</div>
+					<div class="forgot"><a href="#">Forgot Password</a></div>
+				</form>
+			</div>
+			<div class="col-xs-12 col-sm-6 social-media">
+				<p>Or login with:</p>
+				<a href="#">
+					<div><img src="img/fb.png" alt="Facebook"></div>
+					<div class="twitter"><img src="img/twitter.png" alt="Twitter"></div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</body>
+</html>

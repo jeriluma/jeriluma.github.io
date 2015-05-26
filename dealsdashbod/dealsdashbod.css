@@ -14,6 +14,7 @@
 /*
 	Dark Blue 		#1E417B
 	Med Blue 		#4283C5
+	Light Blue 		#3780c2 
 	Green			#97ba41
 	Orange			#ff9900
 	Dark Gray		#505050
@@ -26,7 +27,208 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 	background-color: #EEE;
+	color: #505050;
 }
+
+.footer {
+	background-color: #505050;
+	color: #FFF;
+	padding: 20px;
+}
+
+.log {
+	background-color: #505050;
+	padding: 10px;
+	padding-right: 0;
+}
+
+.log a {
+	color: #505050;
+}
+
+.log .forgot {
+	clear: both;
+	text-align: right;
+	padding-top: 10px;
+}
+
+.log-content {
+	background-color: #1E417B;
+}
+
+.log-content h2 {
+	color: #FFF;
+}
+
+.log-content .row {
+	background-color: #FFF;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.log button {
+	float: right;
+}
+
+.log p {
+	font-weight: 500;
+	font-size: 18px;
+}
+
+
+@media (min-width: 768px) {
+	.log .form-inline {
+		display: inline;
+		float: right;
+	}
+
+	.log .nav-btn {
+		display: none;
+	}
+}
+
+.log .form-inline input,
+.log .form-inline button {
+	border-radius: 0;
+	border: 0;
+	color: #505050;
+	
+}
+
+.log .form-inline input {
+	border: 1px solid #FFF;
+	background-color: #EEE;
+}
+
+.log .form-inline input:focus {
+	border: 1px solid #3780c2;
+}
+
+.log .form-inline button {
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+
+	height: 34px;
+	padding-left: 20px;
+	padding-right: 20px;
+	background-color: #FFF;
+	width: 92px;
+	margin-left: 10px;
+}
+
+.log .form-inline button:focus {
+	border: 2px solid #4283C5;
+}
+
+.log .form-inline button:hover {
+	background-color: #1E417B;
+	border: 2px solid #1E417B;
+	color: #FFF;
+}
+
+.log .form-inline .login {
+	background-color: #4283C5;
+	border: 2px solid #4283C5;
+	color: #FFF;
+}
+
+.log .form-inline .login:hover {
+	background-color: #1E417B;
+	border: 2px solid #1E417B;
+}
+
+.log .form-inline .signUp {
+	background-color: #97ba41;
+	border: 2px solid #97ba41;
+	color: #FFF;
+}
+
+.log .form-inline .signUp:hover {
+	background-color: #ff9900;
+	border: 2px solid #ff9900;
+}
+
+.log .nav-btn {
+	float: right;
+}
+
+.log .nav-btn button {
+	padding-top: 5px;
+	width: auto;
+}
+
+.log .nav-btn .icon-bar {
+	display: block;
+	width: 22px;
+	height: 2px;
+	border-radius: 1px;
+	background-color: #505050;
+	margin-bottom: 5px;
+}
+
+.log .form-group,
+.log .form-group input {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.log .twitter {
+	background-color: #55ACEE;
+	padding: 10px;
+	width: 120px;
+	height: 100px;
+	border-radius: 5px;
+}
+
+.log .social-media {
+	text-align: center;
+}
+
+.log .social-media div {
+	display: inline-block;
+	margin: 10px;
+}
+
+.log img {
+	width: 100px;
+	height: auto;
+}
+
+.log-content form {
+	border-bottom: 2px solid #DDD;
+	padding-bottom: 20px;
+}
+
+.log-content .social-media {
+	padding-top: 20px;
+}
+
+.log-content .social-media img {
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+}
+
+.log-content .social-media img:hover {
+	opacity: 0.7;
+}
+
+@media (min-width: 768px) {
+ 	.log-content form {
+		border-right: 2px solid #DDD;
+		border-bottom: 0;
+		padding-right: 20px;
+	}
+
+	.log-content .social-media {
+		padding-left: 0;
+	}
+ }
 
 .header {
 	background: url("img/bg.jpg")  center 55% no-repeat #4283C5;
@@ -56,6 +258,10 @@ body {
 	color: #1E417B;
 }
 
+.header div {
+	font-weight: 400;
+}
+
 .header .logo {
 	-o-transition:.2s;
 	-ms-transition:.2s;
@@ -75,8 +281,31 @@ body {
 	background-color: #97ba41;
 }
 
+.header .logo div {
+	width: 30px;
+	height: 30px;
+	background-color: #72A2D3;
+	margin: 5px;
+}
+
 .header h1 {
 	font-weight: 300;
+	font-size: 24px;
+}
+
+.subtitle {
+	display: none;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+	.header h1 {
+		font-size: 36px;
+	}
+
+	.subtitle {
+		display: block;
+	}
 }
 
 .container {
@@ -90,7 +319,63 @@ body {
 }
 
 .city h2 {
-	margin: 20px 0;
+	margin-top: 10px;
+	font-size: 20px;
+}
+
+.search {
+	padding: 15px;
+	padding-top: 0;
+}
+
+@media (min-width: 768px) {
+	.city h2 {
+		font-size: 30px;
+		margin: 20px 0;
+	}
+
+	.search {
+		padding: 20px;
+	}
+}
+
+
+
+.search .input-group {
+	height: 33px;
+}
+
+.search .input-group input {
+	border: 0;
+}
+
+.search .input-group:focus input {
+	border: 0;
+}
+
+.search .input-group .input-group-addon {
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+
+	border: 0;
+	border-radius: 0;
+	background-color: #FFF;
+	color: #1E417B;
+
+
+}
+
+.search .input-group:focus .input-group-addon {
+	border-color: #3780c2;
+}
+
+.search .input-group .input-group-addon:hover {
+	cursor: pointer;
+	background-color: #4283C5;
+	color: #FFF;
 }
 
 .sortFilter {
@@ -153,7 +438,7 @@ body {
 
 	margin-top: 20px;
 	background-color: #FFF;
-	border: 1px solid #000;
+	border: 1px solid #505050;
 	padding: 5px 15px;
 }
 
