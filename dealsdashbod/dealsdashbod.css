@@ -1,4 +1,90 @@
-h4 {
-	/*font-size: 16px;*/
-	/*font-weight: bold;*/
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {  }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {  }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  }
+
+/*=======================================================*/
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+	h1 {
+		float: left;
+		display: inline;
+	}
+
+	.subtitle {
+		float: left;
+		display: inline;
+		line-height: 43px;
+	}
+}
+
+.container {
+	overflow: hidden;
+}
+
+.deal {
+	-o-transition:.2s;
+	-ms-transition:.2s;
+	-moz-transition:.2s;
+	-webkit-transition:.2s;
+	transition:.2s;
+
+	overflow: hidden;
+	min-height: 300px;
+	max-height: 300px;
+	margin-bottom: 20px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.deal a {
+	color: #000;
+}
+
+.deal a:hover,
+.deal a:focus {
+	text-decoration: none;
+}
+
+.deal h2 {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.deal .imgContainer {
+	overflow: hidden;
+	height: 200px;
+}
+
+.deal .imgContainer .bigBannerDeal,
+.deal .imgContainer .smallBannerDeal {
+	overflow: hidden;
+	height: 400px;
+}
+
+.deal img {
+	display: block;
+  	min-width: 100%;
+  	height: auto;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+	.deal img {
+		height: 200px;
+		width: auto;
+	}
+
+	.bigBannerDeal img {
+		width: 100%;
+		height: auto;
+	}
 }
