@@ -3,6 +3,46 @@ var dealsApp = angular.module('dealsApp', []);
 dealsApp.controller("dealsController",['$scope', '$http', '$filter',
 	function($scope, $http, $filter){
 
+	$scope.selectedCity = {
+		"city": "Seattle",
+		"state": "WA"
+	};
+
+	$scope.showCities = false;
+
+	$scope.hideCities = function(city) {
+		$scope.showCities = !$scope.showCities;	
+		$scope.selectedCity = city;
+	}
+
+	$scope.cities = [
+		{
+			"city" : "Atlanta",
+			"state": "GA"
+		}, {
+			"city" : "Charlotte",
+			"state": "NC"
+		}, {
+			"city" : "Denver",
+			"state": "CO"
+		}, {
+			"city" : "Indianapolis",
+			"state": "IN"
+		}, {
+			"city" : "Miami",
+			"state": "FL"
+		}, {
+			"city" : "New Orleans",
+			"state": "LA"
+		}, {
+			"city" : "Philadelphia",
+			"state": "PA"
+		}, {
+			"city" : "Seattle",
+			"state": "WA"
+		}, 
+	];
+
 	$scope.deals = [
 		{
 			"id" : 1,

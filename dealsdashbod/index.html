@@ -63,7 +63,17 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 col-sm-6">
-				<h2>Seattle, WA</h2>
+				<h2>{{selectedCity.city}}, {{selectedCity.state}} 
+					<span class="glyphicon glyphicon-chevron-down" ng-click="showCities = true" ng-show="!showCities"></span>
+					<span class="glyphicon glyphicon-chevron-up" ng-click="showCities = false" ng-show="showCities"></span>
+				</h2>
+			</div>
+			<div class="col-xs-12 cities citiesSmall" ng-show="showCities">
+				<div class="col-xs-12 col-sm-3 col-md-3" ng-repeat="city in cities">
+					<button ng-click="hideCities(city)">
+						{{city.city}}, {{city.state}}
+					</button>
+				</div>
 			</div>
 			<div class="col-xs-12 col-sm-6 search">
 				<div class="input-group">
@@ -72,6 +82,16 @@
 					<span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
 				</div>
 			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row cities citiesBig" ng-show="showCities">
+		<div class="col-xs-12 col-sm-3" ng-repeat="city in cities">
+			<button ng-click="hideCities(city)">
+				{{city.city}}, {{city.state}}
+			</button>
 		</div>
 	</div>
 </div>
@@ -112,7 +132,7 @@
 <div class="container content">
 
 	<!-- Banner Area -->
-	<div class="row banner">
+	<div class="row banner bannerBig">
 		<div ng-repeat="deal in deals" ng-if="$index == 0 " class="col-xs-12 deal">
 			<div class="border">
 				<a ng-href="{{deal.source}}">
@@ -185,7 +205,7 @@
 
 	<!-- Deals -->
 	<div class="row">
-		<div ng-repeat="deal in deals" class="col-xs-12 col-sm-6 col-md-4 deal">
+		<div ng-repeat="deal in deals" ng-if="$index > 2" class="col-xs-12 col-sm-6 col-md-4 deal">
 			<div class="border">
 				<a ng-href="{{deal.source}}">
 					<div class="imgContainer">

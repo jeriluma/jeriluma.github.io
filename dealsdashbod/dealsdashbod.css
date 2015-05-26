@@ -30,6 +30,14 @@ body {
 	color: #505050;
 }
 
+button {
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+}
+
 .footer {
 	background-color: #505050;
 	color: #FFF;
@@ -39,7 +47,7 @@ body {
 .log {
 	background-color: #505050;
 	padding: 10px;
-	padding-right: 0;
+	/*padding-right: 0;*/
 }
 
 .log a {
@@ -312,10 +320,24 @@ body {
 	overflow: hidden;
 }
 
-.city {
+.city{
 	background-color: #1E417B;
 	color: #FFF;
 	margin-bottom: 20px;
+}
+
+.city .cities {
+	background-color: #FFF;
+	
+}
+
+.cities {
+	border-bottom: 1px solid #505050;
+	margin-bottom: 20px;
+}
+
+.city .citiesSmall {
+	background-color: #EEE;
 }
 
 .city h2 {
@@ -323,9 +345,53 @@ body {
 	font-size: 20px;
 }
 
+.city .glyphicon {
+	font-size: 18px;
+}
+
+.cities button {
+	
+	width: 100%;
+	text-align: center;
+	margin-bottom: 10px;
+	padding: 10px;
+	background-color: #FFF;
+	border: 1px solid #505050;
+	color: #505050;
+}
+
+.cities button:hover {
+	background-color: #4283C5;
+	color: #FFF;
+	border-color: #4283C5;
+}
+
+.citiesSmall {
+	padding-top: 20px;
+}
+
+.citiesBig {
+	display: none;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {  
+	.cities button {
+		width: 160px;
+	}
+
+	.citiesSmall {
+		display: none;
+	}
+
+	.citiesBig {
+		display: block;
+	}
+}
+
 .search {
 	padding: 15px;
-	padding-top: 0;
+	/*padding-top: 10px;*/
 }
 
 @media (min-width: 768px) {
@@ -509,5 +575,9 @@ body {
 	.banner img {
 		width: 100%;
 		height: auto;
+	}
+
+	.bannerBig .imgContainer {
+		height: 300px;
 	}
 }
