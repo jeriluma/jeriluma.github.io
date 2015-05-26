@@ -665,6 +665,27 @@ button {
 	padding: 5px;
 }
 
+.pages nav {
+	text-align: center;
+}
+
+.pages .pagination>li>a {
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+
+	color: #505050;
+	border:0;
+	border-radius: 0;
+	margin: 5px;
+}
+
+.pages .pagination>li>a:hover {
+	background-color: #4283C5;
+}
+
 .footer {
 	text-align: center;
 }
