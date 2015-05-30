@@ -1,0 +1,110 @@
+<div id="dealsHeader" ng-controller="dealsHeaderController">
+	<div class="city">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6">
+					<h2>{{selectedCity.city}}, {{selectedCity.state}} 
+						<span id="cityDown" class="glyphicon glyphicon-menu-down"></span>
+						<span id="cityUp" class="glyphicon glyphicon-menu-up"></span>
+					</h2>
+				</div>
+				<div class="col-xs-12 cities citiesSmall">
+					<div class="col-xs-12 col-sm-3 col-md-3" ng-repeat="city in cities">
+						<button id="cityBtn" ng-click="selectedCity = city">
+							{{city.city}}, {{city.state}}
+						</button>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 search">
+					<div class="input-group">
+						<label class="sr-only">Search</label>
+						<input type="search" class="form-control" placeholder="search">
+						<span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row cities citiesBig">
+			<div class="col-xs-12 col-sm-3" ng-repeat="city in cities">
+				<button ng-click="hideCities(city)">
+					{{city.city}}, {{city.state}}
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row sortFilter">
+			<div class="col-xs-12 col-sm-6 col-md-3">
+				<select class="sort">
+					<option>Sort By</option>
+					<option>Popularity</option>
+					<option>Newest</option>
+					<option>Expiring Soon</option>
+					<option>Price: Low to High</option>
+					<option>Price: High to Low</option>
+					<option>Discount: Low to High</option>
+					<option>Discount: High to Low</option>
+				</select>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-9">
+				<div id="filter">
+					<button id="open" class="filter">
+						Filter By
+						<span class="glyphicon glyphicon-triangle-bottom"></span>
+					</button>
+					<button id="close" class="filter">
+						Filter By
+						<span class="glyphicon glyphicon-triangle-bottom"></span>
+					</button>
+				</div>
+				<div class="filterSection">
+					<div class="row">
+						<div class="col-xs-12 col-md-6">
+							<h3>Price</h3>
+							<form class="form-inline price">
+								<label>From $</label>
+								<input type="text">
+								<label>To $</label>
+								<input type="text">
+							</form>
+						</div>
+						<div class="col-xs-12 col-md-6">
+							<h3>Discount %</h3>
+							<form class="form-inline price">
+								<label>From $</label>
+								<input type="text">
+								<label>To $</label>
+								<input type="text">
+							</form>
+						</div>
+					</div>
+					<div><h3>Categories</h3></div>
+					<div class="row">
+						<div class="col-xs-12 col-sm-6 col-md-4" ng-repeat="categorySect in categories">
+							<div>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" class="checkboxBig"> <h4>{{categorySect.name}}</h4>
+									</label>
+									<span ng-click="sectionShow = !sectionShow" class="glyphicon glyphicon-triangle-bottom"></span>
+								</div>
+								
+							</div>
+							<div ng-show="sectionShow" ng-repeat="category in categorySect.categories" class="categoriesSect">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox"> {{category.name}}
+									</label>
+								</div>
+							</div>				
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

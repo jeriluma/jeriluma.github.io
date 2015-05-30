@@ -21,43 +21,10 @@
 	<script type="text/javascript" src="dealsdashbod.js"></script>
 </head>
 <body ng-controller="dealsController">
-<!-- Log In -->
-<div class="log">
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-12">
-				<form class="form-inline">
-					<a href="#">
-						<button type="button">Log In</button>
-						<button type="button" class="signUp">Sign Up</button>
-					</a>
-				</form>
-			</div>
-		</div>
-	</div>
-</div>
 
-<!-- Header  -->
-<div class="header">
-	<div class="container">
-		<div class="row">
-			
-		</div>
-		<div class="row">
-			<a href="../dealsdashbod">
-				<div class="col-xs-4 col-sm-12">
-					<div class="logo"><div></div></div>
-				</div>
-				<div class="col-xs-8 col-sm-12">
-					<h1><span>Deals Dashbod</span></h1>
-				</div>
-				<div class="subtitle col-sm-12">
-					<div>Your Daily Deal Tracker</div>
-				</div>
-			</a>
-		</div>
-	</div>
-</div>
+<div ng-include="'loginHeader.tpl.html'"></div>
+
+<div ng-include="'header.tpl.html'"></div>
 
 <div class="log log-content">
 	<div class="container">
@@ -96,22 +63,8 @@
 		</div>
 	</div>
 </div>
-<div class="footer">
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-4">
-				<a href="../">Portfolio</a>
-			</div>
-			<div class="col-xs-4">
-				<div class="logo"><div></div></div>
-			</div>
-			<div class="col-xs-4">
-				<a href="notes.html">Deals Dashbod: Project Notes</a>
-			</div>
-		</div>
-	</div>
-</div>
-</div>
+
+<div ng-include="'footer.tpl.html'"></div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

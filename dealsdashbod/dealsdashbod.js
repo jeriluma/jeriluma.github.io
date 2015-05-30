@@ -1,7 +1,45 @@
-var dealsApp = angular.module('dealsApp', []);	
+var dealsApp = angular.module('dealsApp', []);
 
-dealsApp.controller("dealsController",['$scope', '$http', '$filter',
-	function($scope, $http, $filter){
+dealsApp.controller("dealsHeaderController",['$scope', '$http', '$filter',
+	function($scope, $http, $filter){	
+
+	// A $( document ).ready() block.
+	$( document ).ready(function() {
+		$("#cityUp").hide();
+		$(".cities").hide();
+	    
+	    $("#cityDown").click(function() {
+	    	$(this).hide();
+	    	$("#cityUp").show();
+
+	    	if (window.matchMedia('(min-width: 768px)').matches) {
+	    		$(".citiesBig").slideDown();
+	    	} else {
+	    		$(".citiesSmall").slideDown();
+	    	}
+	    });
+
+	    $("#cityUp").click(function() {
+	    	$(this).hide();
+	    	$("#cityDown").show();
+	    	$(".cities").slideUp();
+	    });
+
+	    $(".filterSection").hide();
+	    $("#filter #close").hide();
+	    
+	    $("#filter #open").click(function(){
+	    	$("#filter #open").hide();
+	    	$("#filter #close").show();
+	    	$(".filterSection").slideDown();
+	    });
+	    $("#filter #close").click(function(){
+	    	$("#filter #close").hide();
+	    	$("#filter #open").show();
+	    	$(".filterSection").slideUp();
+	    });
+
+	});
 
 	$scope.selectedCity = {
 		"city": "Seattle",
@@ -42,6 +80,148 @@ dealsApp.controller("dealsController",['$scope', '$http', '$filter',
 			"state": "WA"
 		}, 
 	];
+
+	$scope.categories = [
+		{
+			"name" : "Retail & Services",
+			"categories" : [
+				{
+					"name": "Automotive Services"
+				}, {
+					"name": "Food & Grocery"
+				} , {
+					"name": "Home Services"
+				}, {
+					"name": "Men's Clothing"
+				}, {
+					"name": "Photography Services"
+				}, {
+					"name": "Women's Clothing"
+				}, {
+					"name": "Treat"
+				}
+			]
+		},{
+			"name": "Special Interest",
+			"categories" : [
+				{
+					"name": "Baby"
+				}, {
+					"name": "Bridal"
+				}, {
+					"name": "College"
+				}, {
+					"name": "Jewish"
+				}, {
+					"name": "Kids"
+				}, {
+					"name": "Kosher"
+				}, {
+					"name": "Pets"
+				}, {
+					"name": "Gay"
+				}, {
+					"name": "Travel"
+				}
+			]
+		}, {
+			"name": "Dining & Nightlife",
+			"categories" : [
+				{
+					"name": "Bars & Clubs"
+				}, {
+					"name": "Restaurants"
+				}
+			]
+		}, {
+			"name": "Fitness",
+			"categories" : [
+				{
+					"name": "Boot Camp"
+				}, {
+					"name": "Fitness Classes"
+				}, {
+					"name": "Martial Arts"
+				}, {
+					"name": "Personal Training"
+				}, {
+					"name": "Gym"
+				}, {
+					"name": "Pilates"
+				}, {
+					"name": "Yoga"
+				}
+			]
+		}, {
+			"name": "Activities & Events",
+			"categories" : [
+				{
+					"name": "Bowling"
+				}, {
+					"name": "City Tours"
+				}, {
+					"name": "Comedy Clubs"
+				}, {
+					"name": "Concerts"
+				}, {
+					"name": "Dance Classes"
+				}, {
+					"name": "Life Skills Classes"
+				}, {
+					"name": "Museums"
+				}, {
+					"name": "Outdoor Adventures"
+				}, {
+					"name": "Skiing"
+				}, {
+					"name": "Skydiving"
+				}, {
+					"name": "Sporting Events"
+				}, {
+					"name": "Theater"
+				}, {
+					"name": "Wine Tasting"
+				}, {
+					"name": "Golf"
+				} 
+			]
+		}, {
+			"name": "Health & Beauty",
+			"categories" : [
+				{
+					"name": "Chiropractic"
+				}, {
+					"name": "Dental"
+				}, {
+					"name": "Dermatology"
+				}, {
+					"name": "Facial"
+				}, {
+					"name": "Hair Removal"
+				}, {
+					"name": "Hair Salon"
+				}, {
+					"name": "Makeup"
+				}, {
+					"name": "Manicure & Pedicure"
+				}, {
+					"name": "Massage"
+				}, {
+					"name": "Eye & Vision"
+				}, {
+					"name": "Spa"
+				}, {
+					"name": "Tanning"
+				}, {
+					"name": "Teeth Whitening"
+				}
+			]
+		}
+	];
+}]);
+
+dealsApp.controller("dealsController",['$scope', '$http', '$filter',
+	function($scope, $http, $filter){
 
 	$scope.deals = [
 		{

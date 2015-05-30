@@ -30,6 +30,13 @@ body {
 	color: #505050;
 }
 
+.database img {
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+	display: block;
+}
+
 button {
 	-o-transition:.5s;
 	-ms-transition:.5s;
@@ -417,6 +424,10 @@ button {
 
 .search .input-group input {
 	border: 0;
+
+	border: 1px solid #505050;
+	border-right: 0;
+	height: 35px;
 }
 
 .search .input-group:focus input {
@@ -435,7 +446,8 @@ button {
 	background-color: #FFF;
 	color: #1E417B;
 
-
+	border: 1px solid #505050;
+	border-left: 0;
 }
 
 .search .input-group:focus .input-group-addon {
@@ -449,16 +461,75 @@ button {
 }
 
 .sortFilter {
-	margin-bottom: 20px;
+
 }
 
-.sort, .filter {
+.sort, 
+.filter {
 	-o-transition:.5s;
 	-ms-transition:.5s;
 	-moz-transition:.5s;
 	-webkit-transition:.5s;
 	transition:.5s;
+}
 
+.sort,
+.filter {
+	background-color: #FFF;
+	border: 1px solid #505050;
+	padding: 5px 15px;
+	margin-top: 15px;
+	width: 100%;
+	text-align: left;
+}
+
+@media (min-width: 768px) {
+	.sort,
+	.filter {
+		margin-top: 0;
+	}
+}
+
+.sortSection,
+.filterSection {
+	background-color: #FFF;
+	padding: 15px;
+	border: 1px solid #505050;
+	border-top: 0;
+}
+
+.filterSection label {
+	font-weight: 300;
+}
+
+.filterSection input {
+	margin-right: 20px;
+}
+
+.filterSection .checkboxBig {
+	margin-top: 13px;
+}
+
+.filter span {
+	display: block;
+	float: right;
+}
+
+.categoriesSect {
+	margin-left: 20px;
+}
+
+.sort option {
+	padding: 10px 15px;
+}
+
+.sortSection div:hover {
+	background-color: #4283C5;
+	color: #FFF;
+}
+
+.filterSection .price input {
+	width: 25%;
 }
 
 .deal {
@@ -470,6 +541,7 @@ button {
 
 	overflow: hidden;
 	margin-bottom: 20px;
+	margin-top: 20px;
 }
 
 .deal .border {
@@ -497,7 +569,7 @@ button {
 	padding-bottom: 0;
 	background-color: #FFF;
 	padding: 15px;
-	height: 190px;
+	height: 130px;
 	text-align: center;
 }
 
@@ -525,7 +597,8 @@ button {
 	border-color: #4283C5;
 }
 
-.deal .dealAdded {
+.deal .dealAdded,
+.deal .dealAdded:hover {
 	background-color: #97ba41;
 	color: #FFF;
 	border-color: #97ba41;
@@ -572,29 +645,35 @@ button {
 
 .deal .imgContainer {
 	overflow: hidden;
-	height: 200px;
+	height: 150px;
 }
 
 .deal {
 	overflow: hidden;
 }
 
-.deal .imgContainter:hover .actions{
+.deal .imgContainer:hover .actions,
+.deal .imgContainer:hover .deal-btn{
 	display: block;
 }
 
 .deal img {
 	display: block;
-  	min-width: 100%;
+  	width: 100%;
   	height: auto;
   	position: center;
 }
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
+	.deal .imgContainer {
+		overflow: hidden;
+		/*height: 200px;*/
+	}
+
 	.deal img {
-		height: 200px;
-		width: auto;
+		/*height: 200px;
+		width: auto;*/
 	}
 
 	.deal .fb img{
@@ -612,11 +691,18 @@ button {
 	}
 }
 
+@media (min-width: 992px) {
+	.bannerSmall .imgContainer {
+		height: 220px;
+	}
+}
+
 .deal:hover .actions {
 	display: block;
 }
 
-.deal .actions {
+.deal .actions,
+.deal .deal-btn {
 	-o-transition:.5s;
 	-ms-transition:.5s;
 	-moz-transition:.5s;
@@ -625,6 +711,14 @@ button {
 
 	position: absolute;
 	display: none;
+}
+
+.deal .deal-btn button {
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
 }
 
 .deal .actions div {
@@ -663,6 +757,28 @@ button {
 	color: #FFF;
 	background-color: #55ACEE;
 	padding: 5px;
+}
+
+.deal .deal-btn {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	margin-top: 80px;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	.bannerBig .deal-btn {
+		margin-top: 230px;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	.bannerSmall .deal-btn {
+		margin-top: 150px;
+	}
 }
 
 .pages nav {

@@ -1,0 +1,159 @@
+<div class="container content" ng-controller="dealsController">
+	<!-- Big Deal -->
+	<div class="row banner bannerBig">
+		<div ng-repeat="deal in deals" ng-if="$index == 0 " class="col-xs-12 deal">
+			<div class="border">
+				<a ng-href="{{deal.source}}">
+					<div class="imgContainer">
+						<div class="actions">
+							<a href="#">
+								<div class="email"><span class="glyphicon glyphicon-envelope"></span></div>
+								<div class="fb"><img src="img/fb.png" alt="Facebook"></div>
+								<div class="twitter"><img src="img/twitter.png" alt="Twitter"></div>
+							</a>
+						</div>
+						<div class="deal-btn">
+							<button type="button" ng-click="deal.add = true" ng-show="!deal.add">Add Deal</button>
+							<button type="button" class="dealAdded" ng-show="deal.add">Deal Added</button>
+						</div>
+						<img ng-src="img/{{deal.id}}.jpg">
+					</div>
+				</a>
+				<div class="details">
+					<a ng-href="{{deal.source}}">
+						<div class="venue">
+							{{deal.venue}}
+						</div>
+						<div class="location">
+							{{deal.location}}
+						</div>
+					</a>
+					<div class="row">
+						<div class="originalPrice col-xs-4">
+							${{deal.originalPrice}}
+						</div>
+						<div class="dealPrice col-xs-4">
+							${{deal.dealPrice}}
+						</div>
+						<div class="savingPercent col-xs-4">
+							{{deal.savingPercent}}% Off
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Small Deals -->
+	<div class="row banner bannerSmall">
+		<div ng-repeat="deal in deals" ng-if="$index > 0 && $index < 3" class="col-xs-12 col-sm-6 deal">
+			<div class="border" ng-class="{dealAddedBorder : deal.add}">
+				<a ng-href="{{deal.source}}">
+					<div class="imgContainer">
+						<div class="actions">
+							<a href="#">
+								<div class="email"><span class="glyphicon glyphicon-envelope"></span></div>
+								<div class="fb"><img src="img/fb.png" alt="Facebook"></div>
+								<div class="twitter"><img src="img/twitter.png" alt="Twitter"></div>
+							</a>
+						</div>
+						<div class="deal-btn">
+							<button type="button" ng-click="deal.add = true" ng-show="!deal.add">Add Deal</button>
+							<button type="button" class="dealAdded" ng-show="deal.add">Deal Added</button>
+						</div>
+						<img ng-src="img/{{deal.id}}.jpg">
+					</div>
+				</a>
+				<div class="details">
+					<a ng-href="{{deal.source}}">
+						<div class="venue">
+							{{deal.venue}}
+						</div>
+						<div class="location">
+							{{deal.location}}
+						</div>
+					</a>
+					<div class="row">
+						<div class="originalPrice col-xs-4">
+							${{deal.originalPrice}}
+						</div>
+						<div class="dealPrice col-xs-4">
+							${{deal.dealPrice}}
+						</div>
+						<div class="savingPercent col-xs-4">
+							{{deal.savingPercent}}% Off
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Other Deals -->
+	<div class="row">
+		<div ng-repeat="deal in deals" ng-if="$index > 2" class="col-xs-12 col-sm-6 col-md-4 deal">
+			<div class="border" ng-class="{dealAddedBorder : deal.add}">
+				<a ng-href="{{deal.source}}">
+					<div class="imgContainer">
+						<div class="actions">
+							<a href="#">
+								<div class="email"><span class="glyphicon glyphicon-envelope"></span></div>
+								<div class="fb"><img src="img/fb.png" alt="Facebook"></div>
+								<div class="twitter"><img src="img/twitter.png" alt="Twitter"></div>
+							</a>
+						</div>
+						<div class="deal-btn">
+							<button type="button" ng-click="deal.add = true" ng-show="!deal.add">Add Deal</button>
+							<button type="button" class="dealAdded" ng-show="deal.add">Deal Added</button>
+						</div>
+						<img ng-src="img/{{deal.id}}.jpg">
+					</div>
+				</a>
+				<div class="details">
+					<a ng-href="{{deal.source}}">
+						<div class="venue">
+							{{deal.venue}}
+						</div>
+						<div class="location">
+							{{deal.location}}
+						</div>
+					</a>
+					<div class="row">
+						<div class="originalPrice col-xs-4">
+							${{deal.originalPrice}}
+						</div>
+						<div class="dealPrice col-xs-4">
+							${{deal.dealPrice}}
+						</div>
+						<div class="savingPercent col-xs-4">
+							{{deal.savingPercent}}% Off
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Pagnation -->
+	<div class="row pages">
+		<nav>
+		  <ul class="pagination">
+		    <li>
+		      <a href="#" aria-label="Previous">
+		        <span aria-hidden="true">&laquo;</span>
+		      </a>
+		    </li>
+		    <li><a href="#">1</a></li>
+		    <li><a href="#">2</a></li>
+		    <li><a href="#">3</a></li>
+		    <li><a href="#">4</a></li>
+		    <li><a href="#">5</a></li>
+		    <li>
+		      <a href="#" aria-label="Next">
+		        <span aria-hidden="true">&raquo;</span>
+		      </a>
+		    </li>
+		  </ul>
+		</nav>
+	</div>
+</div>

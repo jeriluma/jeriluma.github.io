@@ -65,7 +65,10 @@
 
 		<h3>Technical</h3>
 		<p>For quick developement, I have decided to utilize several frameworks and libraries such as Bootstrap for responsiveness, JQuery for easier user of JS, and Angular JS to handle data procesing and functionality.</p>
-		<p>For storing the deal information, a MySQL database to be queries and return JSON data to be processed.</p>
+		<p>For storing the deal information, a MySQL database to be queries and return data to be processed. <b>Note:</b> I was able to create a database on my server, and populate it with entries. However, I was unsuccessful being able to access the database via php, and therefore was not able to run a query through that. Here is an image of the table I created along with it's simple query to retrieve it. So to compensate for that, the 'deal' information is currently stored as a JS object.</p>
+		<div class="database">
+			<img src="img/database.jpg">
+		</div>
 	</div>
 
 	<div class="well">
@@ -108,6 +111,10 @@
 
 		<h4>Social Media Buttons</h4>
 		<p>I opted to remove "share via ___". It is redundant to use an icon + text to show what the icon is suppose to be doing. If the icon needs text, then the icon doesn't represent it's purpose very well.</p>
+
+		<h4>Price / Discount Sliders</h4>
+		<p>The sliders provide too much selection for the user, and should be limited to 5% or 10% increments. It's a very rare care for someone to choose "I want something between 13% and 49%".</p>
+		<p>I also currently don't know how to implement a slider, which I think is still a better implmentation than my current input boxes due to ease of use.</p>
 	</div>
 </div>
 <div class="footer">
