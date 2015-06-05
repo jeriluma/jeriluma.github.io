@@ -1,0 +1,554 @@
+/* Project OM NOM NOM's YouCook stylesheet */
+
+/*--------------------------------- Structure ----------------------------------*/
+
+body {
+  padding-top: 51px;  
+}
+ul {
+  padding: 0 !important;
+}
+.text-center {
+  padding-top: 20px;
+}
+.col-xs-12 {
+  background-color: #fff;
+}
+#sidebar {
+  height: 100%;
+  padding-right: 0;
+  padding-top: 20px;              
+}
+#sidebar .nav {
+  width: 95%;
+}
+#sidebar li {
+  border:0 #f2f2f2 solid;
+  border-bottom-width:1px;
+}
+.nav-line {
+  margin-bottom:10px;
+  margin-top: 0px;
+}
+.nav-bottom {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 8px;
+}
+.nav-bottom a{
+  text-decoration: none;
+  color: #222;
+}
+.nav-bottom ul {
+  list-style: none;
+}
+.nav-bottom li {
+  display: inline;
+  margin-right: 30px;
+}
+.main {
+  margin-top: 65px;
+  margin-bottom: 40px;
+}
+.videoFeed {
+  width: 100%;
+}
+.feed {
+  float: left;
+  display: inline-block !important;
+  margin: 5px;
+}
+.feedGrid{
+  width: 30%;
+}
+.my-cookbook-container .row {
+  margin-bottom: 20px;
+}
+.grocery-video-list-container .video-title {
+  margin-top: 0 !important;
+}
+.feedVideo {
+  width: 300px;
+}
+.checkboxActions {
+  margin: 10px;
+}
+.feedVideo {
+  width: 300px;
+}
+.video-link {
+  width: 100%;
+  height: 400px;
+}
+.mainTitle {
+  float:left;
+  margin-right: 30px;
+}
+.redUnderline {
+  border-bottom: #EB0C13 3px solid;
+  padding: 10px;
+  font-weight: bold;
+}
+.custom-search-form {
+  margin-top:7px;
+  padding-right:10px;
+}
+.mealplanNav {
+  margin-top:20px;
+  margin-bottom:20px;
+}
+.groceryNav {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 8px;
+}
+.groceryNav ul {
+  list-style: none;
+}
+.groceryNav li {
+  display: inline;
+  margin-right: 30px;
+}
+.groceryNav a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #222;
+}
+.ui-datepicker-trigger {
+  width: 30px;
+}
+.hrClear {
+  clear: both;
+}
+.show {
+  display: inline-block;
+}
+.hide {
+  display: none;
+}
+.ingredient-button-x {
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+
+
+
+/*------------------- Add to Cookbook / Add to Meal Plan -------------------------*/
+
+#datepicker {
+ display: none; /* hides, to show only the calendar icon */
+}
+
+.calendarPopupParent {
+  position: relative;
+}
+ 
+.calendarPopup {
+  position:absolute;
+  /*top:0px;
+  left:0px;*/
+  margin-top: 50px;
+  /*margin-left: 267px;*/
+  top: 0;
+  right: 0;
+  font-size:13px;
+  background-color:rgb(240,240,240);
+  z-index:10000000;
+  display:none;
+}
+.desktopPlusOptionsParent { 
+  position: relative;
+}
+.desktopPlusOptions {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.cookbookIcons {
+  right: 50px;
+}
+#desktopPlusCalendarPopup {
+  position: absolute;
+  bottom: -1;
+  right: 0;
+  z-index: 100;
+}
+.desktopPlusCalendar {
+  position: absolute;
+  margin-left: 15%;
+}
+.desktopCookbookPlusOptions {
+  position: relative;
+  left: 260px;
+  top: 225px;
+}
+.video-template .desktopPlusOptions{
+  display: none;
+}
+
+.rowCheckbox {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0 auto;
+}
+
+.rowCheckboxIngredients {
+  margin: 0;
+  width: 20px;
+}
+
+/*---------------------------- Mobile settings in Desktop size -------------------*/
+.mobilePlus {
+  display: none;
+}
+.mobilePopup {
+  position:absolute;
+  top:0px;
+  left:0px;
+  margin-top: 520px;
+  margin-left: 12%;
+  font-size:13px;
+  background-color:rgb(240,240,240);
+  z-index:10000000;
+  display:none;
+}
+
+/*------------------- Single Video Page with Recipe Window -----------------------*/
+#basicInfo {
+  height:100%;
+  padding-top: 20px;
+}
+.soloVideo {
+  /*float:left;*/ 
+  display:inline-block;
+}
+.seeRecipe {
+  float:right;
+  margin-top: 20px;
+  display:inline-block;
+}
+.hideRecipe {
+  float:right;
+  margin-top:20px;
+}
+.mobileAddButton {
+  display: none;
+}
+.stat {
+  float: right;
+}
+.likenolike {
+  float: left;
+}
+.thumbnail {
+  float: left;
+  width: 60px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.videoInfoNav {
+  text-align:right;
+}
+.recipeInfo {
+  border-left: 1px solid #e7e7e7;
+  background-color: #1b1b1b;
+  color: #e7e7e7;
+}
+.recipeTime {
+  float: right;
+  color: #fff;
+  background-color: #707070;
+  padding: 10px;
+}
+.recipeNav {
+  background-color: #707070;
+}
+.recipeNav2 {
+  background-color: #1b1b1b;
+}
+.recipeNav2 a {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+.recipeNavButtons {
+  margin-top: 5px;
+  margin-bottom: 8px;
+}
+.recipeNavButtons ul {
+  list-style: none;
+}
+.recipeNavButtons li {
+  display: inline;
+  margin-right: 5px;
+}
+.recipeButtons {
+  width: 50%;
+  float:left;
+  text-align:center;
+}
+.video-readyIn {
+  padding-top: 10px;
+}
+#directions {
+  display: none;
+}
+#ingredients, #directions {
+  color: #e7e7e7;
+  padding: 15px;
+  height: 246px;
+  border-left: 1px solid #e7e7e7;
+  background-color: #1b1b1b;
+}
+#ingredientsButtons {
+  color: #222;
+  margin: 10px 0 15px;
+}
+.fixed-height {
+  height: 230px;
+  overflow: auto;
+}
+#directions li, #ingredients li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.recipeTools {
+  background-color: #707070;
+  color: #fff;
+}
+.recipeToolButtons {
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+.highlight {
+  background-color: #444;
+}
+
+.direction-item {
+  margin-bottom: 10px;
+}
+
+.direction-measurement {
+  font-weight: bold;
+}
+
+.ingredient-item {
+  font-weight: normal;
+}
+
+.servings-input {
+  text-align: center;
+  color: #000;
+}
+
+.servings-button {
+  color: #000;
+}
+
+.calendarPopupVideo {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin-top: 50px;
+  z-index:10000000;
+  display:none;
+}
+
+.calendarPopupVideoParent {
+  position: relative;
+  display: block;
+}
+
+@media screen and (max-width: 1183px) {
+  .feedVideo {
+    width: 250px;
+  }
+  .cookbookIcons {
+    right: 20px;
+  }
+
+  .desktopPlusOptions {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+/*------------------------- Collapsed Sidebar Styles ----------------------------*/
+@media screen and (min-width: 769px) {
+  #sidebar {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    background: white;
+    top: 56px;
+    left: 0px;
+    box-shadow: 6px 6px 14px #999;
+    height: 85%;
+  }
+  .active #sidebar {
+   display: block;
+  }
+}
+
+/*---------------------------- Mobile media query -------------------------------*/
+
+@media screen and (max-width: 767px) {
+  .row-offcanvas {
+    position: relative !important;
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+  }
+  .nav-line {
+    display: none;
+  }
+  .navbar .nav-bottom {
+    display: none;
+  }
+  .main {
+    margin: 0px;
+  }
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+    right: -41.6%;
+  }
+  .mainTitle {
+    display: block;
+    margin-left: 30px;
+  }
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -41.6%;
+  }
+  .row-offcanvas-right.active {
+    right: 41.6%;
+  }
+  .row-offcanvas-left.active {
+    left: 41.6%;
+  }
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 41.6%;
+  }
+  #sidebar {
+    background-color: white;
+    padding-top:0;
+    border-right: 1px solid #e7e7e7;
+  }
+  #sidebar .nav>li {
+    color: #333;
+    background: white;
+    /* border-top: 1px solid #484848; */
+    border-bottom: 1px solid #e7e7e7;
+  }
+  #sidebar .nav>li:first-child {
+    border-top:0;
+  }
+  #sidebar .nav>li>a {
+    color: #333;
+  }
+  #sidebar .nav>li>a>img {
+    max-width: 14px;
+  }
+  #sidebar .nav>li>a:hover, #sidebar .nav>li>a:focus {
+    text-decoration: none;
+    background: linear-gradient(#373737, #323232);
+    color: #fff;  
+  }
+  #sidebar .nav .caret {
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+  }
+  #sidebar .nav a:hover .caret{
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+  }
+  .groceryNav li {
+    margin: 0 !important;
+  }
+  .video-link {
+    width: 100%;
+    height: 270px;
+  }
+  .feed {
+    width: 100%;
+  }
+  .feedVideo {
+    width: 250px;
+  }
+
+  /*-------------------- Add to Cookbook / Add to Meal Plan --------------------*/
+  .mobilePlus {
+    display: block;
+    float: right;
+  }
+  .mobilePlusOptions {
+    margin-top: 20px;
+  }  
+  .mobilePlusOptions ul {
+    margin: 10px 0 10px;
+    padding: 5px 10px !important;
+    border: 1px dotted #999;
+  }
+  .mobilePlusOptions li {
+    display: inline;
+  }
+  .mobilePlusRotate {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+  }  
+  #mobilePlusCalendarPopup {
+    position: relative;
+    display: none;
+  }
+  .mobilePlusCalendar {
+    position: absolute;
+    margin-left: 15%;
+  }
+  .video-template .mobilePlus {
+    display: none;
+  }
+  .video-template .mobilePlusOptions {
+    display: none !important;
+  }
+  .desktopPlusOptions {
+    display: none;
+  }
+  .desktopCookbookPlusOptions {
+    display: none;
+  }
+
+  /*-------------------- Single video page with Recipe Window --------------------*/
+  .soloVideo {
+    font-size: 24px !important;
+  }
+  .seeRecipe {
+    margin-top: 5px;
+  }
+  #basicInfo, #comments {
+    display: none;
+  }
+  .seeRecipe, .hideRecipe {
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 10px;
+  }
+  .recipeTools {
+    display: none;
+  }
+  .mobileAddButton {
+    display: block;
+    float:right;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }  
+}
+
+.feed-Video {
+  width: 100%;
+  height: auto;
+}

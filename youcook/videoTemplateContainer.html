@@ -1,0 +1,87 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<!-- Main Containers -->
+	<h1>Components</h1>
+	<h1>What to Watch</h1>
+	<div class="what-to-watch-container"></div>
+	<h1>My Cookbook</h1>
+	<div class="my-cookbook-container"></div>
+	<h1>Meal Plan</h1>
+	<div class="meal-plan-container"></div>
+	<h1>Grocery List with videos</h1>
+	<div class="grocery-video-list-container"></div>
+	<h1>Grocery List without videos</h1>
+	<div class="grocery-list-container"></div>
+	<h1>Video Player</h1>
+	<div class="video-player-container">Not called in JS currently</div>
+	
+
+	<!-- Templates -->
+	<!-- video listings -->
+	<div class="template video-template">
+		<h3 class="video-title"></h3>
+		<div class="video-channel"></div>
+		<div class="video-description"></div>
+		<div><a class="video-link" href=""><img class="video-thumbnail" src=""></a></div>
+	</div>
+
+	<!-- grocery list with videos -->
+	<div class="template video-grocery-video-list-template">
+		<h3 class="video-title"></h3>
+		<div><a class="video-link" href=""><img class="video-thumbnail" src=""></a></div>
+		<h4>Ingredients</h4>
+		<div class="video-ingredients">
+			<div class="video-ingredient">
+				<input type="checkbox">
+					<span class="video-ingredient-measurement"></span>
+					<span class="video-ingredient-item"></span>
+				</input>
+			</div>
+		</div>
+	</div>
+
+	<!-- grocery list without videos -->
+	<div class="template video-grocery-list-template">
+		<div class="video-ingredients">
+			<div class="video-ingredient">
+				<input type="checkbox">
+					<span class="video-ingredient-measurement"></span>
+					<span class="video-ingredient-item"></span>
+				</input>
+			</div>
+		</div>
+	</div>
+
+	<!-- video player -->
+	<div class="template video-player-template">
+		<h3 class="video-title"></h3>
+		<!-- You can change the width and height for the video  -->
+		<iframe class="video-link" width="640" height="360" src="" frameborder="0" allowfullscreen></iframe> 
+		<div class="video-channel"></div>
+		<div class="video-description"></div>
+		<h4>Ingredients</h4>
+		<div class="video-ingredients">
+			<div class="video-ingredient">
+				<span class="video-ingredient-measurement"></span>
+				<span class="video-ingredient-item"></span>
+			</div>
+		</div>
+		<h4>Directions</h4>
+		<div class="video-directions">
+			<div class="video-direction">
+				<span class="video-direction-measurement"></span>
+				<span class="video-direction-item"></span>
+			</div>
+		</div>
+		<div class="video-readyIn"></div>
+		<div class="video-servings"></div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script type="text/javascript" src="js/videos.js"></script>
+	<script type="text/javascript" src="js/populateVideos.js"></script>
+	<script type="text/javascript" src="js/videoTemplateContainer.js"></script>
+</body>
+</html>

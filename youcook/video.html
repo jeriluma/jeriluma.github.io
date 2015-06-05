@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+        <title>YouCook</title>
+        <meta name="generator" content="Bootply" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="css/bootstrap.min.css" rel="stylesheet">        
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/jquery-ui.css" rel="stylesheet">
+        
+        <!--[if lt IE 9]>
+          <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+    </head>
+    
+    <!-- HTML code from Bootply.com editor -->
+    
+    <body>
+        
+      <div class="page-container">
+  
+        <!-- top navbar -->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+           <div class="container" style="margin-bottom:5px">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="index.html">YouCook</a>
+                <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <div class="input-group custom-search-form" style="margin-top:7px;padding-right:10px;">
+                <input type="text" class="form-control">
+                  <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">
+                  <span class="glyphicon glyphicon-search"></span>
+                  </button>
+                  </span>
+                </div><!-- /input-group -->
+            </div>
+           </div>
+           <!--
+
+           <hr class="nav-line">
+           <div class="container">
+              <div class="nav-bottom">
+                <ul>
+                  <li><a href="index.html">What to Cook</a></li>
+                  <li><a href="cookbook.html">My Cookbook</a></li>
+                  <li class="redUnderline"><a href="mealplan.html">Meal Plan</a></li>
+                  <li><a href="grocery.html">Grocery List</a></li>
+              </div>
+           </div>
+          -->
+        </div>
+      
+      <div class="container main" style="margin-top:15px;">
+        <div class="row row-offcanvas row-offcanvas-left">
+        
+          <!-- sidebar -->
+          <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+              <ul class="nav">
+                <li class="active"><a href="index.html">What to Cook</a></li>
+                <li><a href="cookbook.html">My Cookbook</a></li>
+                <li><a href="mealplan.html">Meal Plan</a></li> 
+                <li><a href="grocery.html">Grocery List</a></li>             
+              </ul>
+          </div>
+    
+          <!-- main area -->
+          <div class="col-xs-12 col-sm-8"> 
+
+            <div class="video-player-container"></div>
+
+            <!-- video basic info section -->
+            <div id="basicInfo" style="height:100%;">
+              <hr>
+              <img src="img/thumb.jpg" alt="thumbnail" class="thumbnail">
+              <img src="img/stat.png" alt="stat" class="stat">
+              <div class="video-channel"></div>
+              </div>
+            <br>
+
+            <!-- video further info section-->
+            <div id="basicInfo">
+              <img src="img/likenolike.png" alt="likenolike" class="likenolike">
+              <div class="nav-bottom videoInfoNav">
+                <ul>
+                  <li class="redUnderline"><a href="#">About</a></li>
+                  <li><a href="#">Share</a></li>
+                  <li><a href="#">Add to</a></li>
+              </div>
+              <hr class="hrClear">
+              <p>Published on Jun 2, 2013</p>
+            </div>
+            <hr>
+            
+            <!-- video comments -->
+            <div id="comments">
+              <p>ALL COMMENTS</p>
+              <img src="img/thumb.jpg" alt="thumbnail" class="thumbnail">
+              <p>Hi this is first comment</p>
+              <hr class="hrClear">
+              <img src="img/thumb.jpg" alt="thumbnail" class="thumbnail">
+              <p>Hi this is second comment</p>
+              <hr class="hrClear">
+              <img src="img/thumb.jpg" alt="thumbnail" class="thumbnail">
+              <p>Hi this is third comment</p>
+            </div> 
+          </div>
+
+
+          <!-- Right column-->
+          <div class="col-xs-12 col-sm-4 recipeInfo">
+            <div class="recipeTime">
+              <p>Cooking Time</p>
+            </div>
+            <h4>Chicken Nuggets</h4>
+            <h9>Cooking Show Name</h9>            
+          </div>
+
+          <div class="col-xs-12 col-sm-4 recipeNav">
+            <a id="ingredientsButton">
+              <div class="recipeButtons" style="border-right: 1px solid #999;">
+                <h5>Ingredients</h5>
+              </div>
+            </a>
+            <a id="directionsButton">
+              <div class="recipeButtons">
+                <h5>Directions</h5>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-xs-12 col-sm-4" id="ingredients" >
+            <ul>
+              <li>Ingredient 1</li>
+              <li>Ingredient 2</li>
+            </ul>    
+          </div>
+          <div class="col-xs-12 col-sm-4" id="directions">
+            <ul>
+              <li>Direction 1</li>
+              <li>Direction 2</li>
+            </ul>    
+          </div>
+
+          <div class="col-xs-12 col-sm-4" style="border-left: 1px solid #e7e7e7">           
+            <div>
+              <h1>Related Videos</h1>
+              <!-- Related Videos Feed -->
+              <h2>video</h2>
+              <hr>
+              <h2>video</h2>
+              <hr>
+              <h2>video</h2>
+              <hr>
+              <h2>video</h2>
+            </div>
+          </div>
+
+        </div><!--/.row-->
+      </div><!--/.container-->
+    </div><!--/.page-container-->
+        
+        
+        <!-- Templates -->
+        <div class="template video-template">
+          <h3 class="video-title"></h3>
+          <div class="video-channel"></div>
+          <div class="video-description"></div>
+          <div><img class="video-thumbnail" src=""></div>
+        </div>
+
+        <div class="template video-player-template">
+          <!-- You can change the width and height for the video  -->
+          <iframe class="video-link" src="" frameborder="0" allowfullscreen></iframe> 
+          <h3 class="video-title"></h3>
+          
+          <div class="video-channel"></div>
+          <div class="video-description"></div>
+          <h4>Ingredients</h4>
+          <div class="video-ingredients">
+            <div class="video-ingredient">
+              <span class="video-ingredient-measurement"></span>
+              <span class="video-ingredient-item"></span>
+            </div>
+          </div>
+          <h4>Directions</h4>
+          <div class="video-directions">
+            <div class="video-direction">
+              <span class="video-direction-measurement"></span>
+              <span class="video-direction-item"></span>
+            </div>
+          </div>
+          <div class="video-readyIn"></div>
+          <div class="video-servings"></div>
+        </div>
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+        <script type="text/javascript" src="js/videos.js"></script>
+        <script type="text/javascript" src="js/populateVideos.js"></script>
+
+        <script type='text/javascript' src="js/jquery-1.10.2.js"></script>
+        <script type='text/javascript' src="js/jquery-ui-1.10.4.js"></script>
+
+        
+        <!-- JavaScript jQuery code from Bootply.com editor -->
+        
+        <script type='text/javascript'>
+        
+            $(document).ready(function() {
+              $('[data-toggle=offcanvas]').click(function() {
+                $('.row-offcanvas').toggleClass('active');
+              });
+              $('#directionsButton').click(function(){
+                $('#directions').addClass("show");
+                $('#ingredients').addClass("hide");
+              });
+              $('#ingredientsButton').click(function(){
+                $('#directions').removeClass("show");
+                $('#ingredients').removeClass("hide");
+              });
+            });
+        
+        </script>
+    </body>
+</html>

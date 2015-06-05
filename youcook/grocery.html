@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+    <title>YouCook</title>
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <!-- HTML code from Bootply.com editor -->
+  <body>
+    <div class="page-container">
+      <!-- top navbar -->
+      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container" style="margin-bottom:5px">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="index.html"><img src="img/youcooklogo.jpg" style="height: 30px;"></a>
+            <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="input-group custom-search-form">
+              <input type="text" class="form-control">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">
+                  <span class="glyphicon glyphicon-search"></span>
+                </button>
+              </span>
+            </div><!-- /input-group -->
+          </div>
+        </div>
+        <hr class="nav-line">
+        <div class="container">
+          <div class="nav-bottom">
+            <ul>
+              <li><a href="index.html">What to Cook</a></li>
+              <li><a href="cookbook.html">My Cookbook</a></li>
+              <li><a href="mealplan.html">Meal Plan</a></li>
+              <li class="redUnderline"><a href="grocery.html">Grocery List</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container main">
+        <div class="row row-offcanvas row-offcanvas-left">
+          <!-- sidebar -->
+          <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+              <ul class="nav">
+                <li class="active"><a href="index.html">What to Cook</a></li>
+                <li><a href="cookbook.html">My Cookbook</a></li>
+                <li><a href="mealplan.html">Meal Plan</a></li> 
+                <li><a href="grocery.html">Grocery List</a></li>             
+              </ul>
+          </div>
+          <!-- main area -->
+          <div class="col-xs-12 col-sm-9 videoFeed">
+            <h2 class="mainTitle">Grocery List</h2>
+            <div class="input-group custom-search-form" style="margin:20px;">
+              <input type="text" class="form-control" value="Search my grocery list">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">
+                  <span class="glyphicon glyphicon-search"></span>
+                </button>
+              </span>
+            </div><!-- /input-group -->
+            <hr class="hrClear">
+            <div class="groceryNav">
+              <ul>
+                <li id="SortRecipeLi" class="redUnderline"><a id="SortRecipeButton">Sort by Recipe</a></li>
+                <li id="SortIngredientLi"><a id="SortIngredientButton">All Ingredients</a></li>
+              </ul>
+            </div>
+            <hr class="hrClear">
+            <div class="row checkboxActions">
+              <label id="remove-all"><input type="checkbox" class="video-checkbox-all">
+              <span style="font-weight: normal;">Remove All</span></label>
+              <button id="button-remove" style="margin-left: 5px;">Remove</button>   
+              <button id="button-edit">Edit</button>    
+              <button id="button-done">Done</button> 
+              <input type="text" id="text-add-ingredient" value="Add new ingredient...">
+              <button id="button-add-ingredeint">Add</button>
+              <hr class="hrClear">      
+            </div>
+
+            
+            <div class="grocery-video-list-container">
+              <!-- TEMPLATE grocery list with videos -->
+              <div class="template video-grocery-video-list-template row" style="clear: both;">
+                <div class="col-md-1 rowCheckbox" style="float: left;">
+                  <button class="video-ingredient-button-x">X</button>
+                  <input type="checkbox" class="video-checkbox" value=""> 
+                </div>
+                
+                <div class="col-md-5">
+                  <h3 class="video-title"></h3>
+                  <div style="float: left;">
+                    <a class="video-link" href=""><img class="video-thumbnail feedVideo" src=""></a>
+                  </div>
+                </div>
+                
+                <div class="col-md-6" style="float: left; padding-left: 15px;">
+                  <h4>Ingredients</h4>
+                  <div class="video-ingredients">
+                    <div class="video-ingredient ">
+                      <button class="video-ingredient-button-x ingredient-button-x">X</button>
+                      <input type="checkbox" class="video-ingredient-checkbox ">
+                        <span class="video-ingredient-measurement"></span>
+                        <span class="video-ingredient-item"></span>
+                      </input>
+                    </div>
+                  </div>
+                </div>
+                
+                <hr class="hrClear">
+              </div>
+            </div>
+            <div class="grocery-list-container">
+              <!-- TEMPLATE grocery list without videos -->
+              <div class="template video-grocery-list-template feedRow">
+                <div class="video-ingredients">
+                  <div class="video-ingredient">
+                    <button class="video-ingredient-button-x">X</button>
+                    <input type="checkbox" class="video-ingredient-checkbox" >
+                      <span class="video-ingredient-measurement"></span>
+                      <span class="video-ingredient-item"></span>
+                    </input>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- /.col-xs-12 main -->
+        </div><!--/.row-->
+      </div><!--/.container-->
+    </div><!--/.page-container-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/videos.js"></script>
+    <script type="text/javascript" src="js/populateVideos.js"></script>
+    <script type="text/javascript" src="js/grocery.js"></script>
+  </body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+        <title>YouCook Video Player</title>
+        <meta name="generator" content="Bootply" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="css/bootstrap.min.css" rel="stylesheet">        
+        <link href="css/style.css" rel="stylesheet">
+        <link href="css/jquery-ui.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/iosOverlay.css">
+
+        <!--[if lt IE 9]>
+          <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <!-- js script placed on top so that datepicker works -->        
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	    <script type="text/javascript" src="js/jquery-ui-1.10.4.js"></script>
+	    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/videos.js"></script>
+		<script type="text/javascript" src="js/populateVideos.js"></script>
+		<script type="text/javascript" src="js/video.js"></script>
+		<script src="js/iosOverlay.js"></script>
+</head>
+<body>
+
+	<div class="page-container">
+  
+        <!-- top navbar -->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+           <div class="container" style="margin-bottom:5px">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="index.html"><img src="img/youcooklogo.jpg" style="height: 30px;"></a>
+                <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+                <div class="input-group custom-search-form" style="margin-top:7px;padding-right:10px;">
+                <input type="text" class="form-control">
+                  <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">
+                  <span class="glyphicon glyphicon-search"></span>
+                  </button>
+                  </span>
+                </div><!-- /input-group -->
+            </div>
+           </div>
+        </div>
+
+        <div class="container main" style="margin-top:15px;">
+	        <div class="row row-offcanvas row-offcanvas-left">
+	        
+	          <!-- sidebar -->
+	          <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+	              <ul class="nav">
+	                <li class="active"><a href="index.html">What to Cook</a></li>
+	                <li><a href="cookbook.html">My Cookbook</a></li>
+	                <li><a href="mealplan.html">Meal Plan</a></li> 
+	                <li><a href="grocery.html">Grocery List</a></li>         
+	              </ul>
+	          </div>
+
+	          <!-- main area -->
+          	  <div class="col-xs-12 col-sm-8"> 
+          	  	<!-- <iframe class="video-link videoSize" src="" frameborder="0" allowfullscreen></iframe>  -->
+          	  	<div class="videoSize" id="video-link"></div>
+          	  	<!-- video basic info section -->
+	            <div>
+	            	<h2 class="video-title soloVideo"></h2>
+	            	<div class="calendarPopupVideoParent">
+	            		<img src="img/addMealplanButton.png" class="mobileAddButton" id="mobileAddMealPlan">
+	            		<a href="cookbook.html"><img src="img/addCookBookButton.png" class="mobileAddButton"></a>
+	            		<img src="img/recipeButton.png" class="seeRecipe">
+	            		<img src="img/hideButton.png" class="hideRecipe">	            		
+	            		<div id="mobileCalendarPopup" class="calendarPopupVideo"></div>	
+	            	</div>	            	
+            		
+	            	<div id="basicInfo" style="clear:both;">
+	           			<img src="img/thumb.jpg" alt="thumbnail" class="thumbnail">
+		           		<img src="img/stat.png" alt="stat" class="stat">
+		            	<div class="video-channel"></div>
+		            	<img src="img/subscribeButton.png" alt="subscribe">
+		            </div>
+	            </div>
+
+
+
+	            <!-- video further info section-->
+	            <div id="basicInfo">
+	              <img src="img/likenolike.png" alt="likenolike" class="likenolike">
+	              <div class="nav-bottom videoInfoNav">
+	                <ul>
+	                  <li class="redUnderline"><a href="#">About</a></li>
+	                  <li><a href="#">Share</a></li>
+	                  <li><a href="#">Add to</a></li>
+	              </div>
+	              <hr class="hrClear">
+	              <div class="video-description"></div>	              
+	            </div>
+	            
+	            <!-- video comments -->
+	            <div id="comments">
+	              <p>ALL COMMENTS</p>
+	              <img src="img/thumb.jpg" alt="thumbnail" class="thumbnail">
+	              <p>Hi this is first comment</p>
+	              <hr class="hrClear">
+	              <img src="img/thumb.jpg" alt="thumbnail" class="thumbnail">
+	              <p>Hi this is second comment</p>
+	              <hr class="hrClear">
+	              <img src="img/thumb.jpg" alt="thumbnail" class="thumbnail">
+	              <p>Hi this is third comment</p>
+	            </div> 
+          	  </div>
+
+      	 	 <!-- Right column-->
+      	 	  <div id="recipe">
+		          <div class="col-xs-12 col-sm-4 recipeInfo">
+		            <div class="recipeTime">
+		              <div class="video-readyIn"></div>
+		            </div>
+		            <h4 class="video-title"></h4>
+		            <p class="video-channel"></p>                 
+		          </div>
+	          
+		          <div class="col-xs-12 col-sm-4 recipeNav2">
+		         	 <div class="recipeNavButtons">
+		                <ul>
+		                  <li id="ingredientsLi" class="redUnderline"><a id="ingredientsButton">Ingredients</a></li>
+		                  <li id="directionsLi"><a id="directionsButton">Directions</a></li>
+		              </div>
+		          </div>
+
+		          <div class="col-xs-12 col-sm-4" id="ingredients" >
+		          	<div class="fixed-height">
+		          		<span>Makes </span>
+			          	<input type="text" size="1" class="video-servings servings-input">
+			          	<span> Servings</span>
+		          		<button class="servings-button">Adjust Servings</button>
+			            <div class="video-ingredients">
+							<div class="video-ingredient">
+								<label class="ingredient-item">
+									<input type="checkbox">
+									<span class="video-ingredient-measurement"></span>
+									<span class="video-ingredient-item"></span>
+								</label>
+							</div>						
+						</div>
+						<div id="ingredientsButtons">
+							<button id="addIngredients">Add to Grocery List</button>
+							<a href="grocery.html"><button id="seeGroceryListt">See Grocery List</button></a>
+						</div>
+					</div>
+		          </div>
+		          <div class="col-xs-12 col-sm-4" id="directions">
+		          	<div class="fixed-height">
+			            <div class="video-directions">
+			              <div class="video-direction direction-item" style="cursor: pointer;">
+			              	<span class="video-direction-measurement direction-measurement"></span>
+							<span class="video-direction-item"></span>
+			              </div>
+			            </div>   
+			        </div> 
+		          </div>
+
+		          <div class="col-xs-12 col-sm-4 recipeTools" >
+		          	 <div class="recipeToolButtons" id="print" style="cursor: pointer;">
+		                <h5>Print</h5>
+		             </div>
+		             <div class="recipeToolButtons" id="email" style="cursor: pointer;">
+		                <h5>Email</h5>
+		              </div>
+		              <div class="recipeToolButtons" id="addToCookbook" style="cursor: pointer;">
+		                <h5>Add to Cookbook</h5>
+		              </div>
+		              <div class="recipeToolButtons" id="addToMealplan" style="cursor: pointer;">
+		                <h5>Add to MealPlan</h5>
+		                <div id="calendarPopup" class="calendarPopup"></div>
+		              </div>
+		          </div>
+		      </div>
+
+	          <div class="col-xs-12 col-sm-4" style="border-left: 1px solid #e7e7e7">           
+	            <div>
+	              <h3>Related Videos</h3>
+	              <hr>
+	              <div class="related-videos-container"></div>
+	            </div>
+	          </div>
+
+	        </div><!--/.row-->
+      </div><!--/.container-->
+    </div><!--/.page-container-->
+
+    <!-- Templates -->
+    <div class="template related-videos-template">
+		<h4 class="video-title"></h4>
+		<div class="video-channel"></div>
+		<div><a class="video-link" href=""><img class="video-thumbnail feedVideo" src=""></a></div>
+		<hr>
+	</div>
+    <script type="text/javascript" src="js/swfobject.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+    <title>YouCook</title>
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/iosOverlay.css">
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- js script placed on top so that datepicker works -->     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.10.4.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/videos.js"></script>
+    <script type="text/javascript" src="js/populateVideos.js"></script>
+    <script type="text/javascript" src="js/cookbook.js"></script>
+    <script src="js/iosOverlay.js"></script>
+  </head>
+  <!-- HTML code from Bootply.com editor -->
+  <body> 
+    <div class="page-container">
+      <!-- top navbar -->
+      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container" style="margin-bottom:5px">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="index.html"><img src="img/youcooklogo.jpg" style="height: 30px;"></a>
+            <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <div class="input-group custom-search-form" style="margin-top:7px;padding-right:10px;">
+              <input type="text" class="form-control">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">
+                  <span class="glyphicon glyphicon-search"></span>
+                </button>
+              </span>
+            </div><!-- /input-group -->
+          </div>
+        </div>
+        <hr class="nav-line">
+        <div class="container">
+          <div class="nav-bottom">
+            <ul>
+              <li><a href="index.html">What to Cook</a></li>
+              <li class="redUnderline"><a href="cookbook.html">My Cookbook</a></li>
+              <li><a href="mealplan.html">Meal Plan</a></li>
+              <li><a href="grocery.html">Grocery List</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container main">
+        <div class="row row-offcanvas row-offcanvas-left">
+          <!-- sidebar -->
+          <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+              <ul class="nav">
+                <li class="active"><a href="index.html">What to Cook</a></li>
+                <li><a href="cookbook.html">My Cookbook</a></li>
+                <li><a href="mealplan.html">Meal Plan</a></li> 
+                <li><a href="grocery.html">Grocery List</a></li>             
+              </ul>
+          </div>
+          <!-- main area -->
+          <div class="col-xs-12 col-sm-9 videoFeed">
+            <h2 class="mainTitle">My Cookbook</h2>
+            <div class="input-group custom-search-form" style="margin:20px;">
+              <input type="text" class="form-control" value="Search my cookbook">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">
+                  <span class="glyphicon glyphicon-search"></span>
+                </button>
+              </span>
+            </div><!-- /input-group -->            
+            <hr class="hrClear">
+            <div class="row checkboxActions">
+              <button id="button-remove">Remove</button>
+              <button id="button-edit">Edit</button>    
+              <button id="button-done">Done</button>
+              <hr class="hrClear">      
+            </div>
+            <div class="my-cookbook-container"></div>
+          </div><!-- /.col-xs-12 main -->
+        </div><!--/.row-->
+      </div><!--/.container-->
+    </div><!--/.page-container-->
+    <!-- Templates -->
+    <div class="template video-template row">
+      <div class="col-md-1 rowCheckbox" style="float: left;">
+        <input type="checkbox" class="video-checkbox checkbox" value="" style="float: left;">
+        <button class="video-button-x" style="float: left;">X</button>
+      </div>
+      <div class="desktopPlusOptionsParent col-md-4">
+        <!-- <div class="desktopPlusOptions cookbookIcons">
+          <img id="desktopPlusMealPlan" src="img/addMealPlanDesktop.png" style="cursor: pointer;">
+          <div id="desktopPlusCalendarPopup"></div>
+        </div>   -->
+        <div class="desktopPlusOptions">          
+          <img id="desktopPlusMealPlan" src="img/addMealPlanDesktop.png" style="cursor: pointer;">
+          <div id="desktopPlusCalendarPopup"></div>
+        </div> 
+        <!-- <a class="video-link" href=""><img class="video-thumbnail feedVideo" src=""></a>      -->
+        <a class="video-link" href=""><img class="video-thumbnail feed-Video" src=""></a>
+      </div>
+      <div class="rowVideoInfo col-md-7">
+        <h3 class="video-title"></h3>
+        <img src="img/plus.png" class="mobilePlus"> 
+        <div class="video-channel"></div>
+        <div class="mobilePlusOptions" style="display:none">
+          <ul>
+            <button id="mobilePlusMealPlan">Add to Meal Plan</button>
+            <div id="mobilePlusCalendarPopup"></div>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
