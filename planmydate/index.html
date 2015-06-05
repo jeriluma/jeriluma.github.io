@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<head>
+	<title>Plan My Date</title>
+	 <meta charset="UTF-8">
+    <meta name="keywords" content=""> 
+    <meta name="author" content="jeriluma">
+    <title>Plan My Date</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link href="img/logoicon-01.png" rel="shortcut icon" />
+	<script src="js/JQuery.js"></script>
+
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+
+    <script src="js/populateForm.js" type="text/javascript"></script>
+    <script src="js/getDates.js" type="text/javascript"></script>
+</head>
+<body>
+
+	<div class="mainContent">
+		<div id="header">
+			<div class="container">
+				<div id="title"><span>pmd</span></div>
+				<div id="subtitle">plan my date</div>
+			</div>
+		</div>
+
+		<div id="search-bars">
+			<div class="container">
+				<form id="search">
+					<div class="row">
+						<div class="col-3">
+							<div class="col-search">
+								<h1>Location</h1>
+								<div>
+									<input type="text" name="location" placeholder="85 Pike St. Seattle, WA 98101">
+								</div>
+								<div id="location-suggestion-container"></div>
+							</div>
+						</div>
+						<div class="col-3">
+							<div class="col-search">
+								<h1>Food</h1>
+								<div>
+									<input type="text" name="eat" placeholder="Italian, ice cream, beer" >
+									<div id="eat-suggestion-container"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-3">
+							<div class="col-search">
+								<h1>Event</h1>
+								<div>
+									<input type="text" name="event" placeholder="movies, Coldplay, The Filmore" >
+									<div id="event-suggestion-container"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-3">
+							<div class="plan-my-date transition" id="pmd-1"><span>Plan My Date</span></div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="container">
+				<div class="row search-details-options">
+					<div class="search-options-button">
+						<div class="search-options-button-more transition">
+							<div>More Options</div>
+							<div><img src="img/Arrow-right.jpg"></div>
+						</div> 
+						<div class="search-options-button-less transition">
+							<div>Less Options</div>
+							<div><img src="img/Arrow-down.jpg"></div>
+						</div>
+					</div>
+				</div>
+				<div class="row search-options">
+					<div class="row">
+						<div class="search-deails">
+							<div class="search-date"></div>
+							<div class="search-time">
+								<span class="search-start-time"></span>
+								<span> - </span>
+								<span class="search-end-time"></span>
+								<span class="time-message"></span>
+							</div>
+						</div>
+					</div>
+					<div class="calendar col-8">
+						<h1>Date</h1>
+						<h2 class="calendar-month"></h2>
+						<div class"calendar-month-navigation">
+							<span class="calendar-month-before"><img src="img/Arrow-up.jpg"></span>
+							<span class="calendar-month-after"><img src="img/Arrow-down.jpg"></span>
+						</div>
+						<div class="row col-week-container">
+							<div class=" col-week-template col-day-width">
+								<div class="col-week">Sun</div>
+							</div>
+							<div class=" col-week-template col-day-width">
+								<div class="col-week">Mon</div>
+							</div>
+							<div class=" col-week-template col-day-width">
+								<div class="col-week">Tue</div>
+							</div>
+							<div class=" col-week-template col-day-width">
+								<div class="col-week">Wed</div>
+							</div>
+							<div class=" col-week-template col-day-width">
+								<div class="col-week">Thu</div>
+							</div>
+							<div class=" col-week-template col-day-width">
+								<div class="col-week">Fri</div>
+							</div>
+							<div class=" col-week-template col-day-width">
+								<div class="col-week">Sat</div>
+							</div>
+						</div>
+						<div class="day-container row"></div>
+					</div>
+					<div class="time-big col-4">
+						<div class="row">
+							<h1>Times</h1>
+							<div class="row startTime">
+								<h2>Start Time</h2>
+								<div class="col-2">
+									<input type="text" name="startHour" maxlength="2" size="2" class="startHour" placeholder="12" value="12">
+								</div>
+								<div class="col-1">
+									:
+								</div>
+								<div class="col-2">
+									<input type="text" name="startMin"  maxlength="2" size="2" class="startMin" placeholder="00" value="00">
+								</div>
+								<div class="col-2 startAMPM startAM startAMPM-highlight transition">
+									AM
+								</div>
+								<div class="col-2 startAMPM startPM transition">
+									PM
+								</div>
+							</div>
+							<div class="row endTime">
+								<h2>End Time</h2>
+								<div class="col-2">
+									<input type="text" name="endHour" class="endHour" placeholder="12" value="12">
+								</div>
+								<div class="col-1">
+									:
+								</div>
+								<div class="col-2">
+									<input type="text" name="endMin" class="endMin" placeholder="00" value="00">
+								</div>
+								<div class="col-2 endAMPM endAM transition">
+									AM
+								</div>
+								<div class="col-2 endAMPM endPM endAMPM-highlight transition">
+									PM
+								</div>
+							</div>
+							<div class="row time-message"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="select-form transition">
+			<h2 class="line">Can't Decide?</h2>
+			<h3 class="line-message template">Use a Form</h3>
+		</div>
+
+		<div class="container">
+			<div id="search-form">
+				<h1>Select a City</h1>
+				<div class="cities cities-container row"></div>
+				
+				<h1>Select a Day</h1>
+				<div class="calendar">
+					<h3 class="calendar-month"></h3>
+					<div class="calendar-month-navigation">
+						<span class="calendar-month-before"><img src="img/Arrow-up.jpg"></span>
+						<span class="calendar-month-after"><img src="img/Arrow-down.jpg"></span>
+					</div>
+					<div class="row col-week-container">
+						<div class=" col-week-template col-day-width">
+							<div class="col-week">Sun</div>
+						</div>
+						<div class=" col-week-template col-day-width">
+							<div class="col-week">Mon</div>
+						</div>
+						<div class=" col-week-template col-day-width">
+							<div class="col-week">Tue</div>
+						</div>
+						<div class=" col-week-template col-day-width">
+							<div class="col-week">Wed</div>
+						</div>
+						<div class=" col-week-template col-day-width">
+							<div class="col-week">Thu</div>
+						</div>
+						<div class=" col-week-template col-day-width">
+							<div class="col-week">Fri</div>
+						</div>
+						<div class=" col-week-template col-day-width">
+							<div class="col-week">Sat</div>
+						</div>
+					</div>
+					<div class="day-container row"></div>
+				</div>
+
+				<h1>Select a Time</h1>
+				<div class="row">
+					<div class="col-3">
+						<div class="col-time transition">
+							<h3>Morning</h3>
+							<div>Bright and early!</div>
+							<span class="col-real-time template">04:00:AM;10:00:AM</span>
+						</div>
+					</div>
+					<div class="col-3">
+						<div class="col-time transition">
+							<h3>Midday</h3>
+							<div>Lunch? Maybe an afternoon snack..</div>
+							<span class="col-real-time template">10:00:AM;4:00:PM</span>
+						</div>
+					</div>
+					<div class="col-3">
+						<div class="col-time col-time-highlight transition">
+							<h3>Early Evening</h3>
+							<div>That night life.</div>
+							<span class="col-real-time template">4:00:PM;9:00:PM</span>
+						</div>
+					</div>
+					<div class="col-3">
+						<div class="col-time transition">
+							<h3>Late Evening</h3>
+							<div>That late night light.</div>
+							<span class="col-real-time template">8:00:PM;12:00:PM</span>
+						</div>
+					</div>
+				</div>				
+
+				<h1>Select a Food</h1>
+				<div class="row eat-container"></div>
+
+				<h1>Select a Event</h1>
+				<div class="row event-container"></div>
+
+				<div class="plan-my-date transition" id="pmd-2"><span>Plan My Date</span></div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row search-title">
+				<div class="col-6"><h1>Food</h1></div>
+				<div class="col-6"><h1>Event</h1></div>
+			</div>
+			<div class="results-container"></div>
+		</div>
+	</div>
+
+	<div id="footer">
+		<div class="row">
+			<div class="col-3">
+				<div class="eventful-badge eventful-small">
+					<img src="http://api.eventful.com/images/powered/eventful_58x20.gif"
+						alt="Local Events, Concerts, Tickets">
+					<p><a href="http://eventful.com/">Events</a> by Eventful</p>
+				</div>
+				<div>
+					<a href="https://developers.google.com/places/"><img src="img/powered-by-google-on-white.png" alt="Powered by Google"></a>
+				</div>
+			</div>
+			<div class="col-3 footer-information">
+				<p>Jerissa Lumansoc</p>
+				<p>University of Washington</p>
+			</div>
+			<div class="col-3 footer-information">
+				<a href="https://github.com/jeriluma/date">GitHub</a>
+			</div>
+			<div class="col-3 footer-information">
+				<a href="about.html">About</a>
+			</div>
+		</div>
+	</div>
+
+	<div> 
+		<!-- Query Suggestion Template -->
+		<div class="template query-suggestion-template query-suggestion"></div>
+
+		<!-- Date Template -->
+		<div class="template date-template row">
+			<div class="col-6 date-event">
+				<div class="title"></div>
+				<div class="description"></div>
+				<div class="time"></div>
+				<div><img class="image" src=""></div>
+			</div>
+			<div class="col-6 date-eat">
+				<div class="title"></div>
+				<div class="description"></div>
+				<div class="time"></div>
+				<div><img class="image" src=""></div>
+			</div>
+		</div>
+
+		<!-- Week Title Template -->
+		<div class=" template col-week-template col-day-width">
+			<div class="col-week"></div>
+		</div>
+
+		<!-- Day Template -->
+		<div class="template col-day-template col-day-width">
+			<div class="col-day transition"><span></span></div>
+		</div>
+
+		<!-- Results Template -->
+		<div class="template results-template row results-row">
+			<div class="col-6">
+				<h2 class="result-eat-title">
+					<a href="" class="result-eat-reservation"></a>
+				</h2>
+				<div class="result-eat-content">
+					<p class="result-eat-address"></p>
+				</div>
+			</div>
+			<div class="col-6">
+				<h2 class="result-event-title">
+					<a href="" class="result-event-reservation"></a>
+				</h2>
+				<div class="result-event-content">
+					<p class="result-event-venue"></p>
+					<p class="result-event-address"></p>
+					<p class="result-event-description"></p>
+					<p class="result-event-day"></p>
+					<p class="result-event-time"></p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Cities Template -->
+		<div class="template col-3 col-3-location location-template">
+			<div class="col-location transition">
+				<h3 class="col-location-city"></h3>
+				<div class="col-location-state"></div>
+			</div>
+		</div>
+
+		<!-- Eat Template -->
+		<div class="col-3 template eat-template">
+			<div class="col-eat transition">
+				<h3 class="transition eats-title"></h3>
+				<div class="eats-description"></div>
+			</div>
+		</div>
+
+		<!-- Event Template -->
+		<div class="col-3 template event-template">
+			<div class="col-event transition">
+				<h3 class="event-title"></h3>
+				<div class="event-description"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
