@@ -179,7 +179,8 @@ function checkHour(hour, AMPM) {
 
 function getEats(location, eat, events, startTime, endTime) {
     $.get(
-        "js/googleplaces.php", 
+        // "js/googleplaces.php", 
+        "http://skjrgolf.net/test/googleplaces.php",
         {q: eat + ";" + location}, 
         function(data){
             if (data != undefined ) {

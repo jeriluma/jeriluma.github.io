@@ -1,27 +1,50 @@
 <!html>
 <!DOCTYPE html>
-<html>
+<html ng-app="portfolioApp">
 <head>
 	<title>Deals Dashbod | Project Notes</title>
 
-	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" type="text/css" href="../reset.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link href="http://fonts.googleapis.com/css?family=Roboto:500, 400, 300, 300italic" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="../styles.css">
+	<!-- <link rel="stylesheet" type="text/css" href="dealsdashbod.css"> -->
 
-	<!-- Custom CSS -->
-	<link rel="stylesheet" type="text/css" href="dealsdashbod.css">
-</head>	
-<body>
-<div class="container">
-	<h1>Deals Dashbod | <small>Project Notes</small></h1>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+	<script src="../portfolio.js"></script>
+</head>
+<body ng-controller="portfolioCtrl">
 
-	<div class="well">
-		<h2>Objective</h2>
-		<p>A small web development and improvement interview assignment for <a href="https://www.dealsdashbod.com/">Deals Dashbod</a> to demonstrate my skills and capabilities.</p>
-		<p><b>Assignment Here:</b> <a href="../dealsdashbod">Deals Dashbod</a></p>
+<div ng-include="'../header.tpl.html'"></div>
+
+<div class="container notes">
+	<h2>Deals Dashbod | <small>Project Notes</small></h2>
+	<h3><small>Interview Assignment | June 2015</small></h3>
+	
+	<div class="tags">
+		<ul>
+			<li>Web Development</li>
+			<li>UX / UI</li>
+		</ul>
 	</div>
 
 	<div class="well">
-		<h2>Requirements</h2>
+		<h3>Description</h3>
+		<p>A small web development and improvement interview assignment for <a href="https://www.dealsdashbod.com/">Deals Dashbod</a> to demonstrate my skills and capabilities.</p>
+		<p>Assignment Here: <a href="../dealsdashbod">Deals Dashbod</a></p>
+	</div>
+
+	<div class="well">
+		<h3>Tools Used</h3>
+		<ul>
+			<li>HTML, CSS, Bootstrap</li>
+			<li>Javascript, JQuery, Angular JS</li>
+			<li>MySQL (PHPMyAdmin)</li>
+		</ul>
+	</div>
+
+	<div class="well">
+		<h3>Requirements</h3>
 		<ul>
 			<li>A nonfunctional log in / sign up area</li>
 			<li>An area displaying deals</li>
@@ -32,17 +55,17 @@
 	</div>
 
 	<div class="well">
-		<h2>Process</h2>
-		<h3>Understanding</h3>
+		<h3>Process</h3>
+		<h4>Understanding</h4>
 		<p>To better understand Deals Dashbod, I wanted to better Deals Dashbod and their users.</p>
 		
-		<h4>Deals Dashbod</h4>
+		<h5>Deals Dashbod</h5>
 		<p>Deals Dashbod is a daily deal tracker. It finds deals to help users save money and time. And deals are personalized for users for relevant use.</p>
 		
-		<h4>Users</h4>
+		<h5>Users</h5>
 		<p>Deals Dashbod is aimed at users who want to save money and time. Therefore, deals must provide great % savings. As for time, it seems like users are too busy to be keeping track of their deals. So deals must be time-sensitively tracked.</p>
 
-		<h3>Design: A Dashbod Deal</h3>
+		<h4>Design: A Dashbod Deal</h4>
 		<p>
 			An important thing to define is "what is a deal". Looking at the website, a deal must contain:
 			<ul>
@@ -63,7 +86,7 @@
 			</ul>
 		</p>
 
-		<h3>Technical</h3>
+		<h4>Technical</h4>
 		<p>For quick developement, I have decided to utilize several frameworks and libraries such as Bootstrap for responsiveness, JQuery for easier user of JS, and Angular JS to handle data procesing and functionality.</p>
 		<p>For storing the deal information, a MySQL database to be queries and return data to be processed. <b>Note:</b> I was able to create a database on my server, and populate it with entries. However, I was unsuccessful being able to access the database via php, and therefore was not able to run a query through that. Here is an image of the table I created along with it's simple query to retrieve it. So to compensate for that, the 'deal' information is currently stored as a JS object.</p>
 		<div class="database">
@@ -72,7 +95,7 @@
 	</div>
 
 	<div class="well">
-		<h2>Improvements / Suggestions</h2>
+		<h3>Improvements / Suggestions</h3>
 
 		<h4>Responsiveness</h4>
 		<p>With my work, I tried to make the website more responsive. Responsiveness allows users to view Deals Dashbod on many screens, whether it be on the desktop or tablet or mobile. Also the current website utilizes the HTML TABLE tag for layout, which is not proper use.</p>
@@ -117,7 +140,7 @@
 		<p>I also currently don't know how to implement a slider, which I think is still a better implmentation than my current input boxes due to ease of use.</p>
 	</div>
 </div>
-<div class="footer">
+<footer>
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-4">
@@ -131,7 +154,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+</footer>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

@@ -1,9 +1,194 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #EEE;
+	font-size: 12pt;
+}
+
+header {
+	background-color: #FFF;
+	padding: 15px;
+	padding-bottom: 10px;
+	border-bottom: 5px solid rgb(20, 200, 220);
+}
+
+a,
+a:link,
+a:visited {
+	text-decoration: none;
+	color: #000;
+	font-weight: bold;
+
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;	
+}
+
+a:hover,
+a:active {
+	text-decoration: none;
+	color: #777;
+}
+
+
+h1 {
+	margin: 0;
+	/*margin-bottom: 15px;*/
+}
+
+h4 {
+	font-weight: 500;
+}
+
+h5 {
+	font-weight: bold;
+}
+
+nav {
+	text-align: center;
+}
+
+nav a,
+nav a:link {
+	color: #000;
+	text-decoration: none;
+	padding: 20px;
+	padding-top: 10px;
+	padding-bottom: 0;
+	font-style: normal;
+
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+}
+
+nav a:hover,
+nav a:active {
+	color: #777;
+	text-decoration: none;
+}
+
+header .resources a{
+	float: left;
+	padding-left: 0;
+}
+
+header .contactInfo a{
+	float: right;
+	padding-right: 0;
+}
+
+.nav {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.nav li {
+	float: left;
+	margin: 10px;
+	margin-left: 0;
+	display: inline-block;
+	text-align: center;
+
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.nav span {
+	padding: 10px;
+	border: 1px solid #EEE;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+}
+
+.nav li:hover {
+	cursor: pointer;
+}
+
+.nav .active {
+	background-color: #14C8DC;
+	border-color: #14C8DC;
+	color: #FFF;
+	
+}
+
+.nav .inactive {
+	color: #777;
+	border-color: #777;
+}
+
+.nav .inactive:hover {
+	color: #999;
+	border-color: #999;	
+}
+
+.projects {
+	margin-top: 20px;
+}
+
 .project {
+	background-color: #FFF;
+	border: 5px solid #EEE;
+	padding-bottom: 15px;
+	padding-top: 15px;
+
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;	
+}
+
+.project .tags,
+.notes .tags {
+	height: 42px;
+}
+
+.project .tags ul,
+.notes .tags ul{
+	height: 42px;
+	margin-bottom: 0;
+}
+
+.project .tags li,
+.notes .tags li{
+	float: right;
+	margin-left: 10px;
+	padding: 5px 10px;
+	background-color: #14C8DC;
+	color: #FFF;
+	margin-bottom: 10px;
 
 }
 
-.project a{
+.notes .tags li {
+	float: left;
+	margin-left: 0;
+	margin-right: 10px;
+}
+
+.project h3 {
+	clear: both;
+	margin: 0;
+}
+
+.project a,
+.project a:link {
 	color: #000;
+	text-decoration: none;
 
 	-o-transition:.5s;
 	-ms-transition:.5s;
@@ -12,9 +197,10 @@
 	transition:.5s;
 }
 
-.project a:hover {
+.project a:hover,
+.project a:active {
 	text-decoration: none;
-	color: #555;
+	color: #777;
 }
 
 .project .projectLink {
@@ -23,6 +209,64 @@
 
 .project p {
 	margin-top: 10px;
+}
+
+.project .logo {
+	overflow: hidden;
+}
+
+.project .logo img{
+	height: 118px;
+	display: block;
+	margin: 0 auto;
+}
+
+.project .notes {
+	font-weight: bold;
+	text-align: center;
+}
+
+.project .notes-disabled {
+	color: #CCC;
+	cursor: default;
+}
+
+.project .notes-disabled:hover {
+	cursor: default;
+	color: #CCC;
+}
+
+.project .date {
+	color: #777;
+}
+
+.noresults {
+	height: 80vh;
+}
+
+footer {
+	background-color: #FFF;
+	margin-top: 20px;
+	padding: 20px 0;
+	border-top: 5px solid rgb(20, 200, 220);
+}
+
+footer h2 {
+	margin-top: 0;
+}
+
+footer .profile {
+	display: none;
+}
+
+.contactInfo li{
+	float: left;
+	padding: 10px 20px;
+	padding-left: 0;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
 }
 
 .dealsdashbodlogo {
@@ -49,4 +293,96 @@
 	height: 30px;
 	background-color: #72A2D3;
 	margin: 5px;
+}
+
+.planmydate {
+	background-color: #C84648;
+	border-bottom: 10px solid #703E3B;
+	padding: 10px;
+}
+
+.planmydate #title, 
+.planmydate #subtitle {
+	font-weight: 200;
+	text-align: center;
+	font-size: 200%;
+	color: #FFF;
+	margin-top: 10px;
+}
+
+
+.planmydate #title span {
+	border: 1px solid #FFF;
+	padding: 5px 17px 10px 17px;
+	cursor: pointer;
+}
+
+.planmydate #subtitle {
+	font-weight: 100;
+	font-size: 98%;
+	text-transform: none;
+	margin-top: 10px;
+	text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+	.project {
+		margin-bottom: 0;
+	}
+
+	.project .tags ul {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		margin: 15px;
+	}
+}
+
+@media (min-width: 992px) {
+	.project {
+		min-height: 430px;
+	}
+
+	footer .profile {
+		height: 200px;
+		float: right;
+		display: block;
+		margin-left: 15px;
+	}
+}
+
+@media (min-width: 1200px) {
+	
+}
+
+.notes h2 {
+	text-align: left;
+	margin: 20px 15px;
+	margin-left: 0;
+	margin-bottom: 0;
+}
+
+.notes h3 {
+	margin-top: 0;
+}
+
+.notes h3 small {
+	margin-bottom: 15px;
+}
+
+.notes .date {
+	/*text-align: right;*/
+}
+
+.notes .well {
+	background-color: #FFF;
+	border-radius: 0;
+	border: 0;
+}
+
+.notes .well img {
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+	display: block;
 }
