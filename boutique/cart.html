@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <!-- BEGIN head -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Lily's Roomi's Boutique Home Page">
+        <meta name="author" content="alissa, jerissa, lily, jenny">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="shortcut icon" href="img/small-logo.png">
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+
+        <!-- Site Title -->
+        <title>Lily's Roomi's Boutique</title>
+        <link rel='stylesheet' href="css/styles.css">
+    </head>
+
+    <body class="home page page-id-38 page-template page-template-template-home-php mp6 chrome">
+        <div class="header-wrap clearfix">
+            <header id="header" class="clearfix">
+                <div class="logo">
+                    <h1>Lily's Roomi Boutique</h1>
+                </div>
+                
+                <!-- BEGIN .nav -->      
+                <nav class="navbar navbar-default" role="navigation">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li class"active"><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>   
+            </header>            
+        </div>
+
+        <div class="container">
+            <!-- Shopping Cart -->
+            <!-- Shopping Cart Template -->
+            <div class="cart-item-container">
+                <div class="cart-item-template">
+                    <button type="button" class="btn btn-default btn-xs cart-item-remove-btn"><span class="glyphicon glyphicon-remove remove-item"></span></button>
+                    <span class="size"></span>
+                    <span class="name"></span>
+                    $<span class="price"></span>
+                </div>
+            </div> <!-- Shopping Cart Template -->
+                <div>
+                <button type="button" class="btn btn-danger empty-cart-btn"><span class="glyphicon glyphicon-remove"></span> Empty Cart</button>
+            </div>
+            <!-- Shopping Cart Checkout -->
+            <div class="cart-checkout">
+                <div class="row">
+                    <div class="col-xs-10">
+                            Subtotal:
+                        </div>
+                        <div class="col-xs-2">
+                            $<span class="subtotal-price"></span>
+                        </div>  
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-10">
+                            Sales Tax @ 9.5%:
+                        </div>
+                        <div class="col-xs-2">
+                            $<span class="total-price-tax"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-10">
+                            Total:
+                        </div>
+                        <div class="col-xs-2">
+                            $<span class="total-price"></span>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-success check-out-btn">Check Out</button>
+                         </div>
+            </div> <!-- Shopping Cart Checkout -->
+
+            <!-- Paypal Form -->
+            <form class="paypal-form" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input type="hidden" name="cmd" value="_cart">
+                <input type="hidden" name="upload" value="1">
+                <input type="hidden" name="business" value="jerissalumansoc@gmail.com">
+                <span class="paypal-item-container">
+                    <span class="paypal-item-template">
+                        <input type="hidden" id="item-name" name="item_name_" value="">
+                        <input type="hidden" id="amount" name="amount_" value="">
+                    </span>
+                </span>
+            </form> <!-- Paypal Form -->
+        </div> <!-- .container -->
+
+        <footer id="footer" class="clearfix"> 
+            <div class="footer-inner">
+                <div class="footer-left">
+                    <p>© Lily's Roomi Boutique<br/>
+                    All Rights Reserved</p> 
+                </div>
+                <div class="footer-right">
+                    <p class="right">P: 206 889 5567</br>
+                    5567 N 45th St. Seattle WA 98015</p>       
+                </div>
+            </div>      
+        </footer>
+
+        <!-- hot links to Bootstrap JavaScript and jQuery (required by Bootstrap) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <script src="js/populateShop.js"></script>
+        <script src="js/built-shop.js"></script>
+        <script src="js/cartSupport.js"></script>
+    </body>
+</html>

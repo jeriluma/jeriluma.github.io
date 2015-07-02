@@ -11,6 +11,11 @@ header {
 	border-bottom: 5px solid rgb(20, 200, 220);
 }
 
+.decore {
+	background-color: #777;
+	height: 10px;
+}
+
 a,
 a:link,
 a:visited {
@@ -245,7 +250,8 @@ header .contactInfo a{
 }
 
 footer {
-	background-color: #FFF;
+	background-color: #333;
+	color: #FFF;
 	margin-top: 20px;
 	padding: 20px 0;
 	border-top: 5px solid rgb(20, 200, 220);

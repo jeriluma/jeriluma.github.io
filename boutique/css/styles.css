@@ -1,0 +1,388 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    background: #f8f8f8;
+    color: #888888 !important;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    word-wrap: break-word;
+    word-break: break-word;
+    transition:all .1s linear; 
+    -o-transition:all .1s linear; 
+    -moz-transition:all .1s linear; 
+    -webkit-transition:all .1s linear;
+}
+
+body a {
+    font-weight: 700 !important;
+
+}
+
+a:hover { 
+    text-decoration: none;
+    color: #C9C9C9 !important;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a,
+a img {
+    text-decoration: none;
+    outline: none;
+}
+
+p {
+    font-size: 13px;
+    line-height: 15px;
+    margin: 1.125em 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 700;
+    color: #000;
+    text-align: center;
+}
+
+h1 {
+    color: #404040;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    line-height: 1.5em;
+    margin: 20px auto;
+    max-width: 740px;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: #a8a8a8 !important;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    line-height: 1.5em;
+    margin: 20px auto;
+    text-transform: uppercase;
+}
+
+h3 {
+    color: #388E8E !important;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    line-height: 1.5em;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+
+h4 {
+    color: #F8F8F8 !important;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 30px !important;
+    font-weight: 700;
+    letter-spacing: 7px !important;
+    line-height: 1.5em;
+    margin: 0px auto;
+    text-transform: uppercase;
+}
+
+h5 {
+    font-size: 1em; /* 16px */
+    line-height: 2.25em; /* 36px */
+    margin: 1.125em 0;
+}
+
+h6 {
+    font-size: 0.875em; /* 14px */
+    line-height: 2.5714em; /* 36px */
+    margin: 1.2857em 0;
+}
+
+.wrap {
+    min-height: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+pre {
+    font-size: 0.875em;
+    line-height: 2.5714em;
+    margin: 30px 0;
+    padding: 30px;
+    background: #F1F0EE;
+    border: none;
+    -webkit-border-radius: 6px; 
+    -moz-border-radius: 6px; 
+    border-radius: 6px; 
+}
+
+/*-----------------------------------------------------------------------------------
+03. Header
+-----------------------------------------------------------------------------------*/
+
+.header-wrap {
+    background-color: #f8f8f8;
+}
+
+header {
+    margin: 0 auto;
+    padding: 15px 0;
+    max-width: 940px;
+    border-bottom: 0px solid #eeeeee;
+}
+
+/* Header Logo */
+
+.logo {
+    float: left;
+    margin-top: 4px;
+}
+
+.logo:hover {
+    opacity: 0.75;
+}
+
+.logo h1 {
+    margin: 0!important;
+    padding: 0;
+}
+
+.logo h1 a{ 
+    color: #000;
+}
+
+/* Full Width Header */
+
+.fullwidth {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+/* Header Menu */
+
+header nav {
+    float: right;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;;
+    font-weight: 700 !important;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+header nav ul li:hover { 
+    visibility: inherit;
+    text-decoration: none;
+}
+
+header nav ul li a {
+    color: #999999;
+    background: transparent;
+    margin: 0 0 0 20px;
+    padding: 5px 0 5px 20px;
+    font-weight: 700 !important;
+}
+
+/* Homepage - Feature Image Container */
+
+.home-fullwidth {
+    width: 100%;
+    max-height: 450px;
+    overflow: hidden;
+    margin: 0 0 60px 0;
+    position: relative;
+}
+
+/* Homepage - Feature Image */
+
+.home-featuredimage {
+    margin: 0 auto;
+}
+
+.home-featuredimage img{
+    width: 100%;    
+}
+
+.home-home-message a {
+    color: #fff;
+    font-weight: 700;
+}
+
+/* Homepage - Welcome Message */
+.home-home-message {
+    max-width: 900px;
+    margin: 13% auto;
+    color: #f8f8f8 !important;
+    text-align: center; 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    letter-spacing: 8px !important;
+    text-transform: uppercase;
+}
+
+.home-message {
+    max-width: 900px;
+    margin: 13% auto;
+    color: #f8f8f8 !important;
+    text-align: center; 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+    letter-spacing: 8px !important;
+    text-transform: uppercase;
+    background-color: rgba(0,0,0,.4);
+}
+
+
+.home-message h3 {
+    font-color: #f8f8f8 !important;
+    line-height: 48px !important;
+}
+
+.home-message h1,
+.home-message h2,
+.home-message h4 {
+    font-size: 1.5em; /* 16px */
+    line-height: 1.5em; /* 36px */
+    font-weight: 700;
+    margin-top: 0;
+    letter-spacing: 4px;
+    color: #fff!important;
+}
+
+.home-message p {
+    color: #F8F8F8;
+    font-size: 14px;
+    font-weight: 400 !important;
+    letter-spacing: 4px;
+    line-height: 1.5em;
+}
+
+.home-message a {
+    color: #fff;
+    font-weight: 700;
+}
+
+.home-message a:hover {
+    color: #E0645C;
+}
+
+#footer {
+    margin: -10px auto;
+    padding: 30px 0;
+    background: #2e2e2e;
+    font-size: 0.875em; /* 14px */
+    line-height: 2.5714em; /* 36px */
+    color: #fff;
+}
+
+#footer p:last-child,
+#footer .widget p:last-child {
+    margin-bottom: 0;
+    color: #555555;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+
+.footer-inner {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Footer Left */
+
+.footer-left {
+    float: left;
+    width: 50%;
+}
+
+
+.footer-right {
+    float: right;
+    width: 50%;
+    text-align: right;
+}
+
+.pic {
+    width: 45%;
+   display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cart-item-container {
+    margin-top: 30px;
+}
+.sort-ui {
+    text-align: center;
+}
+
+.item-card{
+    width: 300px;
+    height: 425px;
+    float: left;
+    margin: 5px;
+   background-color: transparent; 
+}
+
+.container {
+    margin: 0 auto;
+
+}
+
+.check-out-btn{
+    margin-bottom: 50px;
+}
+
+.cart {
+    margin: 0 auto;
+    clear: both;
+}
+
+.sizes {
+    text-align: center;
+}
+
+.btn-group {
+    border: none;
+}
+
+.section {
+    font-size: 250%;
+    color: #FFF;
+    background-color: rgba(0,0,0,.4);
+}
+
+.items-col {
+     z-index: 999;
+}
+
+
+
+
