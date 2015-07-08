@@ -391,4 +391,10 @@ footer .profile {
 	height: auto;
 	margin: 0 auto;
 	display: block;
+	border: 1px solid #EEE;
+}
+
+.notes .well .tallimg {
+	max-height: 400px;
+	width: auto;
 }
