@@ -26,13 +26,9 @@
 <header>
 	<div class="container">
 		<h1>Jerissa Lumansoc</h1>
-		<nav class="resources">
+		<nav>
 			<a href="#">Projects</a>
 			<a href="resume.pdf">Resume</a>
-		</nav>
-		<nav class="contactInfo">
-			<a href="mailto:JerissaLumansoc@gmail.com?Subject=Hello%20Jerissa">
-			JerissaLumansoc@Gmail.com</a>
 			<a href="https://www.linkedin.com/in/jerissalumansoc">LinkedIn</a>
 		</nav>
 	</div>
@@ -42,8 +38,9 @@
 <div class="container" >
 	<h2 id="projects">Projects</h2>
 	<div>
-		<div>
-			<ul class="nav" ng-init="web = false; ux = false">
+		<div class="tags">
+			<span class="tagslabel">Tags: </span>
+			<ul class="tag" ng-init="web = false; ux = false">
 				<li ng-click="web = !web">
 					<span ng-class="{active: web, inactive: !web}">
 						Web Development
@@ -56,7 +53,7 @@
 				</li>
 			</ul>
 		</div>
-		<div class="">
+		<div>
 			<div class="row projects">
 				<div ng-if="(!web && !ux) || (web && !ux)" class="col-sm-12 col-md-6 col-lg-4 project">
 					<a href="cashvue">
